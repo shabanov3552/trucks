@@ -22,6 +22,19 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 			}
 		});
 	}
+	document.body.addEventListener("input", function (e) {
+		const targetElement = e.target;
+		if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
+			if (targetElement.dataset.placeholder) {
+				targetElement.placeholder = '';
+			}
+			if (!targetElement.hasAttribute('data-no-focus-classes')) {
+				targetElement.classList.add('_form-focus');
+				targetElement.parentElement.classList.add('_form-focus');
+				if (targetElement.parentElement.querySelector('.form__clear-svg')) targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active');
+			}
+		}
+	});
 	document.body.addEventListener("focusin", function (e) {
 		const targetElement = e.target;
 		if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
@@ -31,8 +44,31 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.add('_form-focus');
 				targetElement.parentElement.classList.add('_form-focus');
+
+				if (e.target.value.length > 0) {
+					if (targetElement.parentElement.querySelector('.form__clear-svg')) targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active');
+				}
+
 			}
-			targetElement.hasAttribute('data-validate') ? formValidate.removeError(targetElement) : null;
+			formValidate.removeError(targetElement);
+		}
+		if (targetElement.classList.contains('js_phone')) {
+			//'+7(999) 999 9999'
+			//'+38(999) 999 9999'
+			//'+375(99)999-99-99'
+			targetElement.classList.add('_mask');
+			Inputmask('+7(x99) 999 9999', {
+				clearIncomplete: true,
+				clearMaskOnLostFocus: true,
+				definitions: {
+					x: {
+						validator: '[0-79-9]'
+					}
+				},
+				onincomplete: function () {
+					targetElement.inputmask.remove();
+				}
+			}).mask(targetElement);
 		}
 	});
 	document.body.addEventListener("focusout", function (e) {
@@ -41,12 +77,21 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 			if (targetElement.dataset.placeholder) {
 				targetElement.placeholder = targetElement.dataset.placeholder;
 			}
-			if (!targetElement.hasAttribute('data-no-focus-classes')) {
-				targetElement.classList.remove('_form-focus');
-				targetElement.parentElement.classList.remove('_form-focus');
+			if (targetElement.value.length == 0) {
+				if (!targetElement.hasAttribute('data-no-focus-classes')) {
+					targetElement.classList.remove('_form-focus');
+					targetElement.parentElement.classList.remove('_form-focus');
+					if (targetElement.nextElementSibling) { targetElement.nextElementSibling.classList.remove('_active'); }
+				}
+			}
+			if (targetElement.classList.contains('js_phone')) {
+				Inputmask.remove(targetElement);
+
 			}
 			// Моментальная валидация
-			targetElement.hasAttribute('data-validate') ? formValidate.validateInput(targetElement) : null;
+			if (targetElement.hasAttribute('data-validate')) {
+				formValidate.validateInput(targetElement);
+			}
 		}
 	});
 	// Если включено, добавляем функционал "Показать пароль"
@@ -62,25 +107,27 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 	}
 	// Если включено, добавляем функционал "Автовысота"
 	if (options.autoHeight) {
-		const textareas = document.querySelectorAll('textarea[data-autoheight]');
-		if (textareas.length) {
-			textareas.forEach(textarea => {
-				const startHeight = textarea.hasAttribute('data-autoheight-min') ?
-					Number(textarea.dataset.autoheightMin) : Number(textarea.offsetHeight);
-				const maxHeight = textarea.hasAttribute('data-autoheight-max') ?
-					Number(textarea.dataset.autoheightMax) : Infinity;
-				setHeight(textarea, Math.min(startHeight, maxHeight))
-				textarea.addEventListener('input', () => {
-					if (textarea.scrollHeight > startHeight) {
-						textarea.style.height = `auto`;
-						setHeight(textarea, Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight));
-					}
+		setTimeout(() => {
+			const textareas = document.querySelectorAll('textarea[data-autoheight]');
+			if (textareas.length) {
+				textareas.forEach(textarea => {
+					const startHeight = textarea.hasAttribute('data-autoheight-min') ?
+						Number(textarea.dataset.autoheightMin) : Number(textarea.offsetHeight);
+					const maxHeight = textarea.hasAttribute('data-autoheight-max') ?
+						Number(textarea.dataset.autoheightMax) : Infinity;
+					setHeight(textarea, Math.min(startHeight, maxHeight))
+					textarea.addEventListener('input', () => {
+						if (textarea.scrollHeight > startHeight) {
+							textarea.style.height = `auto`;
+							setHeight(textarea, Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight));
+						}
+					});
 				});
-			});
-			function setHeight(textarea, height) {
-				textarea.style.height = `${height}px`;
+				function setHeight(textarea, height) {
+					textarea.style.height = `${height + 16}px`;
+				}
 			}
-		}
+		}, 1);
 	}
 }
 // Валидация форм

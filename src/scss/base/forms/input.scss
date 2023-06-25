@@ -31,7 +31,10 @@ textarea {
 	}
 }
 
-textarea.input {
-	resize: none;
-	padding: 0px 0px;
+textarea.form__input {
+	resize: vertical;
+	padding-top: rem(16);
+	padding-bottom: rem(16);
+	min-height: 100px;
+	// @extend %hidescroll;
 }

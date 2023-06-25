@@ -1,17 +1,173 @@
 //<FORM>
-// Снипет (HTML):
+
 .form {
-	&__row {}
 
-	&__column {}
+	// .form__line
 
-	&__line {}
+	&__line {
+		max-width: 392px;
+		position: relative;
 
-	&__input {}
+		@media (max-width:$mobileMiddle) {
+			max-width: 100%;
+		}
 
-	&__button {}
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+		}
+	}
 
-	&__error {}
+	// .form__label
+
+	&__label {
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: 16px;
+		height: 63px;
+		display: flex;
+		align-items: center;
+		color: rgba(255, 255, 255, 0.604535);
+		transition: all 0.3s ease 0s;
+
+		._form-focus & {
+			top: -47px;
+			font-size: 14px;
+			left: 0;
+		}
+	}
+
+	// .form__input
+
+	&__input {
+		width: 100%;
+		background: rgba(0, 0, 0, 0.197875);
+		border: 4px solid #C1CDD8;
+		box-shadow: 0px 12px 13px rgba(0, 0, 0, 0.195777), inset 0px 8px 10px rgba(0, 0, 0, 0.475497);
+		border-radius: 10px;
+		min-height: 63px;
+		color: #fff;
+		padding-left: rem(16);
+		padding-right: rem(50);
+	}
+
+	// .form__clear-svg
+
+	&__clear-svg {
+		cursor: pointer;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 20px;
+		height: 20px;
+		display: none;
+
+		&._active {
+			display: block;
+		}
+
+		use {
+			fill: #C1CDD8;
+		}
+	}
+
+	// .form__footer
+
+	&__footer {
+		margin-top: rem(48);
+		display: flex;
+		flex-wrap: wrap;
+		gap: 50px;
+		row-gap: 30px;
+		align-items: flex-start;
+		padding: 0 rem(20);
+
+		@media (max-width:$mobileMiddle) {
+			flex-direction: column;
+		}
+	}
+
+	// .form__button
+
+	&__button {
+		padding: rem(21) rem(39);
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		color: #fff;
+		background: #3A3A3A;
+		border: 1px solid rgba(255, 255, 255, 0.706266);
+		box-shadow: 0px 0px 0px 6px #3A3A3A,
+			0px 0px 0px 7px rgba(255, 255, 255, 0.230742),
+			0px 0px 0px 17px #3A3A3A,
+			0px 0px 0px 18px rgba(255, 255, 255, 0.0699028);
+		border-radius: 10px;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			background-color: #fff;
+			color: #000;
+		}
+
+		@media (max-width:$mobileMiddle) {
+			width: 100%;
+		}
+	}
+
+	// .form__check
+
+	&__check {
+		.checkbox {
+
+			// .checkbox__label
+
+			&__label {
+				padding: 0;
+
+				@media (max-width:$mobileMiddle) {
+					margin-left: rem(-10);
+				}
+			}
+
+			// .checkbox__input
+
+			&__input {
+				&:checked+.checkbox__check {
+					background: url(../img/icons/check-gray.svg) center/12px 9px no-repeat;
+				}
+			}
+
+			// .checkbox__check
+
+			&__check {
+				border: 1px solid rgba(255, 255, 255, 0.5);
+				border-radius: 2px;
+				width: 16px;
+				height: 16px;
+				flex: 0 0 16px;
+				align-self: flex-start;
+				background: transparent;
+
+			}
+
+			// .checkbox__text
+
+			&__text {
+				font-size: 12px;
+				line-height: 18px;
+				color: rgba(255, 255, 255, 0.5);
+
+				a {
+					text-decoration: underline;
+					display: block;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
 }
 
 //</FORM>
@@ -22,7 +178,7 @@
 
 // <INPUTS>
 // Снипет (HTML): inp
-// @import "input";
+@import "input";
 
 // <CHECK>
 // Снипет (HTML): chk

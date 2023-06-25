@@ -1,0 +1,260 @@
+.options {
+
+   // .options__cards
+
+   &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: rem(164);
+      @include adaptiveValue("gap", 230, 100, 0, 1920, 1440);
+      @include adaptiveValue("padding-left", 150, 80, 0, 1920, 1440);
+      @include adaptiveValue("padding-right", 150, 80, 0, 1920, 1440);
+
+      @media (max-width:$laptop) {
+         @include adaptiveValue("padding-left", 80, 20, 0, 1280, 1000);
+         @include adaptiveValue("padding-right", 80, 20, 0, 1280, 1000);
+         grid-template-columns: 1fr;
+      }
+
+      @media (max-width:$mobile) {
+         gap: 60px;
+         margin-bottom: rem(100);
+      }
+
+   }
+
+}
+
+
+.option-card {
+   display: flex;
+   flex-direction: column;
+   // .option-card__top
+
+   &__top {
+      @include adaptiveValue("font-size", 28, 22, 0, 1920, 768);
+      @include adaptiveValue("line-height", 45, 27, 0, 1920, 768);
+      margin-bottom: rem(60);
+      // min-height: 135px;
+      flex: 1 1 auto;
+
+      @media (max-width:$laptop) {
+         margin-bottom: rem(40);
+      }
+
+      span {
+         color: #CF1235;
+      }
+   }
+
+   // .option-card__image-ibg
+
+   &__image-ibg {
+      height: 400px;
+      margin-bottom: rem(40);
+      @include adaptiveValue("height", 400, 230, 0, 768, 375);
+   }
+
+   // .option-card__name
+
+   &__name {
+      margin-bottom: rem(30);
+      display: block;
+      @include adaptiveValue("font-size", 43, 23, 0, 1920, 768);
+      @include adaptiveValue("line-height", 52, 28, 0, 1920, 768);
+   }
+
+   // .option-card__descr
+
+   &__descr {
+      line-height: 29px;
+      margin-bottom: rem(20);
+   }
+
+   // .option-card__footer
+
+   &__footer {
+      display: flex;
+      align-items: center;
+
+      @media (max-width:$mobile) {
+         display: grid;
+         grid-template-columns: 1fr 60px;
+         gap: 20px;
+      }
+   }
+
+   // .option-card__price
+
+   &__price {
+      font-size: 28px;
+      line-height: 34px;
+      margin-right: rem(25);
+      white-space: nowrap;
+
+      @media (max-width:$mobile) {
+         grid-column: 1/3;
+      }
+
+      span {
+         font-size: 38px;
+         line-height: 46px;
+         padding: 0 rem(10);
+      }
+   }
+
+   // .option-card__text
+
+   &__text {
+      font-size: 14px;
+      line-height: 17px;
+      color: #848484;
+      margin-right: rem(60);
+      flex: 1 1 auto;
+   }
+
+   // .option-card__more
+
+   &__more {
+      width: 70px;
+      flex: 0 0 70px;
+
+      @media (max-width:$mobile) {
+         width: 60px;
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+}
+
+.page-from {
+   background: #3A3A3A;
+   // .page-from__container
+
+   &__container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: rem(100);
+      display: flex;
+      gap: 100px;
+
+      @media (max-width:$laptopL) {
+         gap: 80px;
+      }
+
+      @media (max-width:$laptop) {
+         padding: rem(80);
+      }
+
+      @media (max-width:$tablet) {
+         @include adaptiveValue("padding", 80, 20, 0, 1000, 768);
+      }
+
+      @media (max-width:$mobile) {
+         display: block;
+      }
+   }
+
+   // .page-from__col
+
+   &__col {
+      flex: 0 1 50%;
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(50);
+      }
+   }
+
+   // .page-from__title
+
+   &__title {
+      font-weight: 400;
+      font-size: 43px;
+      line-height: 52px;
+      color: #fff;
+      margin-bottom: rem(50);
+      @include adaptiveValue("font-size", 43, 23, 0, 1000, 768);
+      @include adaptiveValue("line-height", 52, 28, 0, 1000, 768);
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(30);
+      }
+   }
+
+   // .page-from__descr
+
+   &__descr {
+      line-height: 29px;
+      color: #fff;
+      max-width: 390px;
+   }
+
+   // .page-from__form
+
+   &__form {
+      flex: 0 0 540px;
+
+      @media (max-width:$laptop) {
+         flex: 0 1 50%;
+      }
+   }
+}
+
+.form {
+
+   // .form__line
+
+   &__line {}
+
+   // .form__label
+
+   &__label {}
+
+   // .form__input
+
+   &__input {}
+
+   // .form__clear-svg
+
+   &__clear-svg {}
+
+   // .form__footer
+
+   &__footer {}
+
+   // .form__button
+
+   &__button {}
+
+   // .form__check
+
+   &__check {}
+}
+
+.js {
+
+   // .js_phone
+
+   &_phone {}
+}
+
+.checkbox {
+
+   // .checkbox__label
+
+   &__label {}
+
+   // .checkbox__input
+
+   &__input {}
+
+   // .checkbox__check
+
+   &__check {}
+
+   // .checkbox__text
+
+   &__text {}
+}

@@ -1,0 +1,77 @@
+@@include('html/_header.htm',{
+"title":"Дополнительное оборудование",
+"modClass":""
+})
+<main class="page options">
+   @@include('html/_breadcrumbs.htm',{})
+   <div class="page__title">Дополнительное оборудование</div>
+   <div class="options__cards">
+      <div class="option-card">
+         <div class="option-card__top"><span>Сервисный центр ООО «Порт Восток»</span> также занимается установкой оборудования на грузовики, тягачи и самосвалы.</div>
+         <div class="option-card__image-ibg option-card__image-ibg_contain"><img src="img/options/option-card-1.png" alt=""></div>
+         <a href="" class="option-card__name">Установка сухого фена</a>
+         <div class="option-card__descr">Автономный воздушный отопитель для обогрева кабины грузового автомобиля позволяет поддерживать в кабине комфортную температуру без задействования климатической системы и без лишних расходов топлива.</div>
+         <div class="option-card__footer">
+            <div class="option-card__price">от<span>12 000</span>₽</div>
+            <div class="option-card__text"> — конечная цена может варьироваться от места установки</div>
+            <a href="" class="option-card__more"><img src="img/icons/icon-arrow-more-black.svg" alt=""></a>
+         </div>
+      </div>
+      <div class="option-card">
+         <div class="option-card__top">Все работы по установке дополнительного оборудования можно <span>проводить на выезде</span></div>
+         <div class="option-card__image-ibg option-card__image-ibg_contain"><img src="img/options/option-card-2.png" alt=""></div>
+         <a href="" class="option-card__name">Установка откидного тента</a>
+         <div class="option-card__descr">Автономный воздушный отопитель для обогрева кабины грузового автомобиля позволяет поддерживать в кабине комфортную температуру без задействования климатической системы и без лишних расходов топлива.</div>
+         <div class="option-card__footer">
+            <div class="option-card__price">от<span>25 000</span>₽</div>
+            <div class="option-card__text"> — конечная цена может варьироваться от места установки</div>
+            <a href="" class="option-card__more"><img src="img/icons/icon-arrow-more-black.svg" alt=""></a>
+         </div>
+      </div>
+   </div>
+   <div class="page-from">
+      <div class="page-from__container">
+         <div class="page-from__col">
+            <div class="page-from__title">Записаться на установку дополнительного оборудования</div>
+            <div class="page-from__descr">Предложим оптимальные варианты и установим в нашем сервисе</div>
+         </div>
+         <div class="page-from__form">
+            <form action="">
+               <div class="form__line">
+                  <label for="p-callback-1.1" class="form__label">Ваше имя *</label>
+                  <input required id="p-callback-1.1" type="text" class="form__input">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__line">
+                  <label for="p-callback-1.2" class="form__label">Контактный номер *</label>
+                  <input required id="p-callback-1.2" type="tel" class="form__input js_phone">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__line">
+                  <label for="p-callback-1.3" class="form__label">Комментарий</label>
+                  <textarea data-autoheight id="p-callback-1.3" class="form__input"></textarea>
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__footer">
+                  <button type="submit" class="form__button">Отправить</button>
+                  <div class="form__check checkbox">
+                     <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" checked>
+                        <span class="checkbox__check"></span>
+                        <span class="checkbox__text">Отправляя данные, я даю свое <a href="">согласие на обработку перс. данных</a></span>
+                     </label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})
+@@include('html/_popup.htm',{})

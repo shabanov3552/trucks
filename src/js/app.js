@@ -46,14 +46,14 @@ flsFunctions.menuInit();
 Документация: https://template.fls.guru/template-docs/modul-taby.html
 Сниппет (HTML): tabs
 */
-// flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "показать еще"
 Документация: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
 Сниппет (HTML): showmore
 */
-// flsFunctions.showMore();
+flsFunctions.showMore();
 
 /*
 Модуль "Эффект волн"
@@ -74,7 +74,7 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/funkcional-popup.html
 Сніппет (HTML): pl, pop
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль параллакса мышью
@@ -89,12 +89,12 @@ import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
+
 flsForms.formFieldsInit({
 	viewPass: false,
-	autoHeight: false
+	autoHeight: true
 });
-*/
+
 
 /* Oтправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
@@ -119,7 +119,7 @@ import './libs/select.js'
 Документация плагина: https://github.com/RobinHerbots/inputmask
 Сниппет(HTML):
 */
-// import "./files/forms/inputmask.js";
+import "./files/forms/inputmask.js";
 
 /* Модуль работы с ползунком */
 /*
@@ -210,7 +210,7 @@ flsScroll.headerScroll();
 Документация плагина: https://www.lightgalleryjs.com/docs/
 Сниппет(HTML):
 */
-// import "./files/gallery.js";
+import "./files/gallery.js";
 
 // ========================================================================================================================================================================================================================================================
 // Прочие плагины ============================================================================================================================================================================================================================================================================================================
