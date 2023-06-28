@@ -1,0 +1,130 @@
+@@include('html/_header.htm',{
+"title":"Контакты",
+"modClass":""
+})
+<main class="page contacts">
+   @@include('html/_breadcrumbs.htm',{})
+   <h1 class="page__title">Контакты</h1>
+   <div class="contacts__grid">
+      <div class="contacts__left-block">
+         <a href="tel:+73919868091" class="contacts__link"><img src="img/icons/contacts__phone.svg" alt=""><span>+7 391 986-8091</span></a>
+         <a href="mailto:3580832@mail.ru" class="contacts__link"><img src="img/icons/contacts__mail.svg" alt=""><span>3580832@mail.ru</span></a>
+         <div class="addres">
+            <svg class="addres__svg">
+               <use xlink:href="img/icons/icons.svg#icon-map"></use>
+            </svg>
+            <span>Красноярск, Кардачинская, 28 – офис компании</span>
+         </div>
+         <div class="addres">
+            <svg class="addres__svg">
+               <use xlink:href="img/icons/icons.svg#icon-map"></use>
+            </svg>
+            <span>Кардачинская, 24 — автосервис Shacman</span>
+         </div>
+         <div class="contacts__requisites">
+            <h2 class="contacts__title">Общество c Ограниченной Ответственностью "ПОРТ-ВОСТОК"</h2>
+            <ul class="contacts__list">
+               <li class="contacts__item">
+                  <div class="contacts__name">ИНН</div>
+                  <div class="contacts__value">2466293469</div>
+               </li>
+               <li class="contacts__item">
+                  <div class="contacts__name">КПП</div>
+                  <div class="contacts__value">246601001</div>
+               </li>
+               <li class="contacts__item">
+                  <div class="contacts__name">ОГРН</div>
+                  <div class="contacts__value">1222400027915</div>
+               </li>
+               <li class="contacts__item">
+                  <div class="contacts__name">Юридический адрес </div>
+                  <div class="contacts__value">660043, Красноярский край, Красноярск, Караульная 40, кв. 518</div>
+               </li>
+               <li class="contacts__item">
+                  <div class="contacts__name">Почтовый адрес</div>
+                  <div class="contacts__value">660118, г. Красноярск, Северное шоссе 25</div>
+               </li>
+               <li class="contacts__item">
+                  <div class="contacts__name">Наименование банка.</div>
+                  <div class="contacts__value">ФИЛИАЛ "НОВОСИБИРСКИЙ" АО "АЛЬФА-БАНК"</div>
+               </li>
+               <li class="contacts__item">
+                  <div class="contacts__name">Расчетный счет в рублях РФ</div>
+                  <div class="contacts__value">40702810823590002041</div>
+               </li>
+               <li class="contacts__item">
+                  <div class="contacts__name">Корреспондирующий счёт</div>
+                  <div class="contacts__value">30101810600000000774</div>
+               </li>
+               <li class="contacts__item">
+                  <div class="contacts__name">БИК</div>
+                  <div class="contacts__value">045004774</div>
+               </li>
+            </ul>
+            <a href="" download="" class="document">
+               <img src="img/icons/pdf-red.svg" alt="">
+               <span class="document__name">Реквизиты</span>
+               <span class="document__text">PDF, 1.8 МB</span>
+            </a>
+         </div>
+      </div>
+      <div class="contacts__map">
+         <div id="map"></div>
+         <script>
+            @@include('js/files/map.js', {})
+         </script>
+      </div>
+   </div>
+   <div class="page-from">
+      <div class="page-from__container">
+         <div class="page-from__col">
+            <h3 class="page-from__title">Есть вопрос или предложение?</h3>
+            <div class="page-from__descr">Воспользуйтесь формой обратной связи</div>
+         </div>
+         <div class="page-from__form">
+            <form action="">
+               <div class="form__line">
+                  <label for="p-callback-1.1" class="form__label">Ваше имя</label>
+                  <input required id="p-callback-1.1" type="text" class="form__input">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__line">
+                  <label for="p-callback-1.3" class="form__label">Ваше имя</label>
+                  <input required id="p-callback-1.3" type="email" class="form__input">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__line">
+                  <label for="p-callback-1.2" class="form__label">Контактный номер</label>
+                  <input required id="p-callback-1.2" type="tel" class="form__input js_phone">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__line">
+                  <label for="p-callback-1.3" class="form__label">Комментарий</label>
+                  <textarea data-autoheight id="p-callback-1.3" class="form__input"></textarea>
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__footer">
+                  <button type="submit" class="form__button">Отправить</button>
+                  <div class="form__check checkbox">
+                     <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" checked>
+                        <span class="checkbox__check"></span>
+                        <span class="checkbox__text">Отправляя данные, я даю свое <a href="">согласие на обработку перс. данных</a></span>
+                     </label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})
+@@include('html/_popup.htm',{})

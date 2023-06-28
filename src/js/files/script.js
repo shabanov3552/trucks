@@ -143,3 +143,75 @@ function copyUrl() {
 }
 
 //#endregion
+
+
+const video = document.querySelector(".home-page__fb-video video");
+
+if (video) {
+   // video.addEventListener("ended", (e) => {
+   //    console.log(e);
+   //    startAnim();
+   // });
+   // video.addEventListener("waiting", (e) => {
+   //    console.log(e);
+   // })
+   // video.addEventListener("pause", (e) => {
+   //    console.log(e);
+   // })
+   // video.addEventListener("suspend", (e) => {
+   //    console.log(e);
+   // })
+   // video.addEventListener("error", (e) => {
+   //    console.log(e);
+   // })
+   video.addEventListener("timeupdate", (e) => {
+      if (e.target.currentTime <= 0.1) {
+         startAnim();
+      }
+   })
+}
+
+export function startAnim() {
+   if (!video) return
+
+   const messageFirst = document.querySelector('.home-page__fb-message_first'),
+      messageSecond = document.querySelector('.home-page__fb-message_second'),
+      messageThird = document.querySelector('.home-page__fb-message_third'),
+      messageFourth = document.querySelector('.home-page__fb-message_fourth'),
+      messageFifth = document.querySelector('.home-page__fb-message_fifth');
+
+   // первое появление карточки
+   messageFifth.classList.add('_active');
+   setTimeout(() => {
+      messageFifth.classList.remove('_active');
+   }, 3000);
+
+   // второе появление карточки
+   setTimeout(() => {
+      messageFirst.classList.add('_active');
+   }, 3500);
+
+   // третье появление карточки
+   setTimeout(() => {
+      messageFirst.classList.remove('_active');
+      messageSecond.classList.add('_active');
+   }, 6700);
+
+   // четвертое появление карточки
+   setTimeout(() => {
+      messageSecond.classList.remove('_active');
+      messageThird.classList.add('_active');
+   }, 10000);
+
+   // пятое появление карточки
+   setTimeout(() => {
+      messageThird.classList.remove('_active');
+      messageFourth.classList.add('_active');
+   }, 11500);
+
+   // скрытие пятой карточки
+   setTimeout(() => {
+      messageFourth.classList.remove('_active');
+      video.currentTime = 0;
+   }, 12900);
+}

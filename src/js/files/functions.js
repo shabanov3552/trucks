@@ -1,5 +1,6 @@
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
+import { startAnim } from './script.js';
 
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
 export function isWebp() {
@@ -30,6 +31,7 @@ export function addLoadedClass() {
 		window.addEventListener("load", function () {
 			setTimeout(function () {
 				document.documentElement.classList.add('loaded');
+				startAnim();
 			}, 0);
 		});
 	}

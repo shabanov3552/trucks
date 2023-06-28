@@ -1,0 +1,154 @@
+@@include('html/_header.htm',{
+"title":"Серия",
+"modClass":"white"
+})
+<main class="page series">
+   @@include('html/_breadcrumbs.htm',{})
+   <div class="series__image-ibg"><img src="img/series/bg.png" alt=""></div>
+   <div class="series__first-block">
+      <h1 class="series__title">
+         <span class="series__brand">SHACMAN</span>
+         <span class="series__model">x<span class="series__model-num">3000</span></span>
+      </h1>
+      <div class="series__subtitle">Идеальный баланс мощности и комфорта</div>
+   </div>
+   <div class="series__second-block">
+      <div class="series__video">
+         <video src="files/video/slide-video-1.mp4" autoplay muted loop></video>
+      </div>
+      <div class="series__sb-col">
+         <div class="series__sb-top">
+            <p>Автомобили серии Х3000 имеют принципиально новый дизайн и конструкцию. </p>
+         </div>
+         <div class="series__sb-bottom">
+            <p>Кроме того, данная модель автомобиля является единственной в Китае, успешно прошедшей испытания на удар и соответствующей европейским стандартам ECER29, а ее безопасность и комфортабельность вышли на передовой уровень в мире.</p>
+         </div>
+      </div>
+   </div>
+   <div class="series__gallery">
+      <div class="truck-detail__photo-slider swiper">
+         <div class="truck-detail__photo-wrapper swiper-wrapper" data-gallery>
+            <div class="truck-detail__photo-slide-ibg swiper-slide" data-src="img/series/photo-1.jpg">
+               <img src="img/series/photo-1.jpg" alt="">
+            </div>
+            <div class="truck-detail__photo-slide-ibg swiper-slide" data-src="img/series/photo-2.jpg">
+               <img src="img/series/photo-2.jpg" alt="">
+            </div>
+            <div class="truck-detail__photo-slide-ibg swiper-slide" data-src="img/series/photo-1.jpg">
+               <img src="img/series/photo-1.jpg" alt="">
+            </div>
+            <div class="truck-detail__photo-slide-ibg swiper-slide" data-src="img/series/photo-2.jpg">
+               <img src="img/series/photo-2.jpg" alt="">
+            </div>
+         </div>
+         <div class="truck-detail__photo-slider-btns">
+            <button type="button" class="swiper-button-prev">
+               <img src="img/icons/video-slider-arrow-left.svg" alt="">
+            </button>
+            <button type="button" class="swiper-button-next">
+               <img src="img/icons/video-slider-arrow-right.svg" alt="">
+            </button>
+         </div>
+      </div>
+   </div>
+   <div class="series__advantages">
+      <h2 class="series__adv-title">Преимущества серии</h2>
+      <ol class="series__adv-list">
+         <li class="series__adv-item">Специальное ПО бортового компьютера, двойной компрессор сброса нагрузки воздушного цилиндра, обновленное управление электроникой</li>
+         <li class="series__adv-item">Большой воздухозаборник: новая, запатентованная система охлаждения двигателя с пониженным давлением</li>
+         <li class="series__adv-item">Новый европейский дизайн в стиле каюты, полная оптимизация CFD, коэффициент аэродинамического сопротивления снизился до 0,53</li>
+         <li class="series__adv-item">Однослойная конструкция рамы от MAN: легкий и прочный сплав, созданный под сверхвысоким давлением</li>
+         <li class="series__adv-item">Интеллектуальная сетевая архитектура электроники</li>
+      </ol>
+   </div>
+   <div class="truck-cards">
+      <div class="truck-cards__slider swiper">
+         <div class="truck-cards__wrapper swiper-wrapper">
+            <div class="truck-cards__slide swiper-slide">
+               @@include('html/_product-card.htm',{
+               "imageSrc":"img/catalog/truck-7.jpg",
+               "series":"x",
+               "seriesNum":"3000",
+               "truckType":"Автобетоносмеситель, 550 л.с",
+               "article":"SX42584W324C, 6х4",
+               "oldPrice":"10 900 000"
+               })
+            </div>
+            <div class="truck-cards__slide swiper-slide">
+               @@include('html/_product-card.htm',{
+               "imageSrc":"img/catalog/truck-1.jpg",
+               "series":"F",
+               "seriesNum":"3000",
+               "truckType":"Самосвал, 550 л.с",
+               "article":"SX42584W324C, 6х4",
+               "oldPrice":"10 900 000"
+               })
+            </div>
+            <div class="truck-cards__slide swiper-slide">
+               @@include('html/_product-card.htm',{
+               "imageSrc":"img/catalog/truck-2.jpg",
+               "series":"x",
+               "seriesNum":"6000",
+               "truckType":"Самосвал, 550 л.с",
+               "article":"SX42584W324C, 6х4",
+               "oldPrice":""
+               })
+            </div>
+            <div class="truck-cards__slide swiper-slide">
+               @@include('html/_product-card.htm',{
+               "imageSrc":"img/catalog/truck-7.jpg",
+               "series":"x",
+               "seriesNum":"3000",
+               "truckType":"Автобетоносмеситель, 550 л.с",
+               "article":"SX42584W324C, 6х4",
+               "oldPrice":"10 900 000"
+               })
+            </div>
+         </div>
+         <button type="button" class="swiper-button-prev">
+            <img src="img/icons/video-slider-arrow-left.svg" alt="">
+         </button>
+         <button type="button" class="swiper-button-next">
+            <img src="img/icons/video-slider-arrow-right.svg" alt="">
+         </button>
+      </div>
+   </div>
+   <div class="page-from">
+      <div class="page-from__container">
+         <div class="page-from__col">
+            <h3 class="page-from__title">Оставить заявку</h3>
+            <div class="page-from__descr">Оставьте контактные данные и наши специалисты свяжутся с вами для уточнения деталей</div>
+         </div>
+         <div class="page-from__form">
+            <form action="">
+               <div class="form__line">
+                  <label for="p-callback-1.1" class="form__label">Ваше имя *</label>
+                  <input required id="p-callback-1.1" type="text" class="form__input">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__line">
+                  <label for="p-callback-1.2" class="form__label">Контактный номер *</label>
+                  <input required id="p-callback-1.2" type="tel" class="form__input js_phone">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__footer">
+                  <button type="submit" class="form__button">Отправить</button>
+                  <div class="form__check checkbox">
+                     <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" checked>
+                        <span class="checkbox__check"></span>
+                        <span class="checkbox__text">Отправляя данные, я даю свое <a href="">согласие на обработку перс. данных</a></span>
+                     </label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})
+@@include('html/_popup.htm',{})

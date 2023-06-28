@@ -1,0 +1,209 @@
+.about {
+
+   // .about__row
+
+   &__row {
+      margin-top: rem(66);
+      padding: 0 rem(160);
+      display: grid;
+      grid-template-columns: 2.686fr 1fr;
+      gap: 63px;
+      margin-bottom: rem(120);
+
+      @media (max-width:$laptopL) {
+         padding: 0 rem(100);
+      }
+
+      @media (max-width:$laptop) {
+         grid-template-columns: 1fr;
+         padding: 0 rem(80);
+         margin-bottom: rem(75);
+      }
+
+      @media (max-width:$tablet) {
+         padding: 0 rem(40);
+      }
+
+      @media (max-width:$mobile) {
+         padding: 0 rem(20);
+         gap: 40px;
+      }
+
+      @media (max-width:$mobileMiddle) {
+         padding: 0;
+         margin-bottom: rem(40);
+      }
+   }
+
+   // .about__video
+
+   &__video {
+      border-radius: 20px;
+      @extend %responsiveVideo;
+   }
+
+   // .about__descr
+
+   &__descr {
+      padding-top: rem(38);
+      line-height: 29px;
+
+      @media (max-width:$mobileMiddle) {
+         padding: 0 rem(20);
+      }
+   }
+
+   // .about__gallery
+
+   &__gallery {
+
+      .home-page {
+
+         // .home-page__third-block
+
+         &__third-block {
+            padding-left: rem(160);
+            padding-right: rem(93);
+
+            @media (max-width:$laptopL) {
+               padding: rem(90) rem(100);
+            }
+
+            @media (max-width:$laptop) {
+               padding: rem(45) rem(80) rem(95);
+            }
+
+            @media (max-width:$tablet) {
+               padding: rem(40);
+            }
+
+            @media (max-width:$mobile) {
+               padding: rem(20);
+            }
+         }
+
+         // .home-page__tb-container
+
+         &__tb-container {}
+
+         // .home-page__tb-grid
+
+         &__tb-grid {
+
+            grid-template-columns: 1fr 1.24fr;
+            grid-template-rows: 1.2fr 0.736fr 1fr;
+
+            @media (max-width:$laptopL) {
+               grid-template-columns: 1fr 1.07fr;
+               grid-template-rows: 0.85fr 0.5fr 1fr;
+            }
+
+            @media (max-width:$laptop) {
+               grid-template-columns: 1fr 1.05fr;
+               grid-template-rows: 1.25fr 1.1fr 1fr;
+            }
+
+            @media (max-width:$mobileMiddle) {
+               grid-template-columns: 1fr;
+               grid-template-rows: 3.95fr 1.2fr 1.1fr 1fr;
+            }
+         }
+
+         // .home-page__tb-image-ibg
+
+         &__tb-image-ibg {
+
+            // .home-page__tb-image-ibg_first
+
+            &_first {
+               grid-column: 1/2;
+               grid-row: 1/4;
+
+               @media (max-width:$mobileMiddle) {
+                  grid-column: auto;
+                  grid-row: auto;
+               }
+            }
+
+            // .home-page__tb-image-ibg_second
+
+            &_second {
+               grid-column: 2/3;
+               grid-row: 1/2;
+
+               @media (max-width:$mobileMiddle) {
+                  grid-column: auto;
+                  grid-row: auto;
+               }
+            }
+
+            // .home-page__tb-image-ibg_third
+
+            &_third {
+               grid-column: 2/3;
+               grid-row: 2/3;
+               margin-right: rem(280);
+
+               @media (max-width:$laptopL) {
+                  margin-right: rem(168);
+               }
+
+               @media (max-width:$laptop) {
+                  @include adaptiveValue("margin-right", 168, 0, 0, 1280, 1000);
+               }
+
+               @media (max-width:$mobileMiddle) {
+                  grid-column: auto;
+                  grid-row: auto;
+               }
+            }
+         }
+
+         // .home-page__tb-text
+
+         &__tb-text {
+
+            // .home-page__tb-text_second
+
+            &_second {
+               grid-column: 2/3;
+               grid-row: 3/4;
+               padding: 0;
+               padding-bottom: rem(150);
+               margin-left: rem(58);
+               margin-top: rem(60);
+               max-width: 310px;
+
+               @media (max-width:$laptopL) {
+                  margin-top: rem(40);
+                  margin-left: rem(30);
+               }
+
+               @media (max-width:$laptop) {
+                  margin-left: rem(24);
+                  margin-top: rem(20);
+                  padding-bottom: 0;
+                  font-size: 30px;
+                  line-height: 35px;
+               }
+
+               @media (max-width:$mobileMiddle) {
+                  grid-column: auto;
+                  grid-row: auto;
+                  font-size: 18px;
+                  line-height: 26px;
+                  max-width: 100%;
+                  margin: 0;
+                  padding: 0;
+                  padding-top: rem(30);
+                  padding-right: rem(13);
+
+                  img {
+                     margin-top: rem(35);
+                  }
+               }
+            }
+         }
+      }
+   }
+}

@@ -3257,6 +3257,98 @@
     (() => {
         "use strict";
         const modules_flsModules = {};
+        document.addEventListener("click", (function(e) {
+            if (e.target.closest(".form__clear-svg")) {
+                let input = e.target.closest(".form__line").querySelector(".form__input");
+                input.value = "";
+                input.classList.remove("_form-focus");
+                input.parentElement.classList.remove("_form-focus");
+                e.target.closest(".form__clear-svg").classList.remove("_active");
+                input.style.height = `auto`;
+            }
+        }));
+        const dropdown = document.querySelector(".menu__item_dropdown");
+        if (dropdown) {
+            let ddBox = document.querySelector(".dropdown-catalog");
+            let header = document.querySelector(".header");
+            document.addEventListener("click", (function(e) {
+                if (e.target.closest(".menu__item_dropdown .menu__link")) {
+                    e.preventDefault();
+                    if (!ddBox.classList.contains("_slide")) {
+                        _slideToggle(ddBox);
+                        dropdown.classList.toggle("dropdown-open");
+                        header.classList.toggle("dropdown-open");
+                    }
+                }
+                if (!e.target.closest(".menu__item_dropdown .menu__link")) if (!ddBox.classList.contains("_slide")) {
+                    _slideUp(ddBox);
+                    dropdown.classList.remove("dropdown-open");
+                    header.classList.remove("dropdown-open");
+                }
+            }));
+        }
+        let shareButton = document.getElementById("share-button");
+        if (shareButton) {
+            let thisUrl = window.location.href;
+            let thisTitle = document.title;
+            shareButton.addEventListener("click", (function() {
+                if (navigator.share && isMobile.any()) navigator.share({
+                    title: thisTitle,
+                    url: thisUrl
+                }).then((function() {})).catch((function() {})); else {
+                    modules_flsModules.popup.open("#share-popup");
+                    copyUrl();
+                }
+            }));
+        }
+        function copyUrl() {
+            const copyButton = document.querySelector(".share__button");
+            const copyInput = document.querySelector(".share__input");
+            console.log(copyInput);
+            copyInput.value = window.location.href;
+            setTimeout((() => {
+                copyInput.focus();
+            }), 100);
+            copyButton.addEventListener("click", (function(e) {
+                copyInput.select();
+                document.execCommand("copy");
+                window.getSelection().removeAllRanges();
+                copyButton.innerHTML = "Ссылка скопированна";
+                copyButton.classList.remove("btn__orange");
+                copyButton.setAttribute("disabled", "true");
+            }));
+        }
+        const video = document.querySelector(".home-page__fb-video video");
+        if (video) video.addEventListener("timeupdate", (e => {
+            if (e.target.currentTime <= .1) startAnim();
+        }));
+        function startAnim() {
+            if (!video) return;
+            const messageFirst = document.querySelector(".home-page__fb-message_first"), messageSecond = document.querySelector(".home-page__fb-message_second"), messageThird = document.querySelector(".home-page__fb-message_third"), messageFourth = document.querySelector(".home-page__fb-message_fourth"), messageFifth = document.querySelector(".home-page__fb-message_fifth");
+            messageFifth.classList.add("_active");
+            setTimeout((() => {
+                messageFifth.classList.remove("_active");
+            }), 3e3);
+            setTimeout((() => {
+                messageFirst.classList.add("_active");
+            }), 3500);
+            setTimeout((() => {
+                messageFirst.classList.remove("_active");
+                messageSecond.classList.add("_active");
+            }), 6700);
+            setTimeout((() => {
+                messageSecond.classList.remove("_active");
+                messageThird.classList.add("_active");
+            }), 1e4);
+            setTimeout((() => {
+                messageThird.classList.remove("_active");
+                messageFourth.classList.add("_active");
+            }), 11500);
+            setTimeout((() => {
+                messageFourth.classList.remove("_active");
+                video.currentTime = 0;
+            }), 12900);
+        }
         function isWebp() {
             function testWebP(callback) {
                 let webP = new Image;
@@ -3290,6 +3382,14 @@
                 return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
             }
         };
+        function addLoadedClass() {
+            if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
+                setTimeout((function() {
+                    document.documentElement.classList.add("loaded");
+                    startAnim();
+                }), 0);
+            }));
+        }
         function functions_getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
@@ -7382,6 +7482,34 @@
                     }
                 }
             });
+            if (document.querySelector(".truck-cards__slider")) new core(".truck-cards__slider", {
+                modules: [ Navigation ],
+                observer: true,
+                observeParents: true,
+                speed: 800,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 60
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 60
+                    },
+                    1e3: {
+                        slidesPerView: 2,
+                        spaceBetween: 140
+                    },
+                    1440: {
+                        slidesPerView: 3,
+                        spaceBetween: 100
+                    }
+                },
+                navigation: {
+                    prevEl: ".truck-cards__slider .swiper-button-prev",
+                    nextEl: ".truck-cards__slider .swiper-button-next"
+                }
+            });
         }
         window.addEventListener("load", (function(e) {
             initSliders();
@@ -9230,69 +9358,9 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         const da = new DynamicAdapt("max");
         da.init();
-        document.addEventListener("click", (function(e) {
-            if (e.target.closest(".form__clear-svg")) {
-                let input = e.target.closest(".form__line").querySelector(".form__input");
-                input.value = "";
-                input.classList.remove("_form-focus");
-                input.parentElement.classList.remove("_form-focus");
-                e.target.closest(".form__clear-svg").classList.remove("_active");
-                input.style.height = `auto`;
-            }
-        }));
-        const dropdown = document.querySelector(".menu__item_dropdown");
-        if (dropdown) {
-            let ddBox = document.querySelector(".dropdown-catalog");
-            let header = document.querySelector(".header");
-            document.addEventListener("click", (function(e) {
-                if (e.target.closest(".menu__item_dropdown .menu__link")) {
-                    e.preventDefault();
-                    if (!ddBox.classList.contains("_slide")) {
-                        _slideToggle(ddBox);
-                        dropdown.classList.toggle("dropdown-open");
-                        header.classList.toggle("dropdown-open");
-                    }
-                }
-                if (!e.target.closest(".menu__item_dropdown .menu__link")) if (!ddBox.classList.contains("_slide")) {
-                    _slideUp(ddBox);
-                    dropdown.classList.remove("dropdown-open");
-                    header.classList.remove("dropdown-open");
-                }
-            }));
-        }
-        let shareButton = document.getElementById("share-button");
-        if (shareButton) {
-            let thisUrl = window.location.href;
-            let thisTitle = document.title;
-            shareButton.addEventListener("click", (function() {
-                if (navigator.share && isMobile.any()) navigator.share({
-                    title: thisTitle,
-                    url: thisUrl
-                }).then((function() {})).catch((function() {})); else {
-                    modules_flsModules.popup.open("#share-popup");
-                    copyUrl();
-                }
-            }));
-        }
-        function copyUrl() {
-            const copyButton = document.querySelector(".share__button");
-            const copyInput = document.querySelector(".share__input");
-            console.log(copyInput);
-            copyInput.value = window.location.href;
-            setTimeout((() => {
-                copyInput.focus();
-            }), 100);
-            copyButton.addEventListener("click", (function(e) {
-                copyInput.select();
-                document.execCommand("copy");
-                window.getSelection().removeAllRanges();
-                copyButton.innerHTML = "Ссылка скопированна";
-                copyButton.classList.remove("btn__orange");
-                copyButton.setAttribute("disabled", "true");
-            }));
-        }
-        window["FLS"] = true;
+        window["FLS"] = false;
         isWebp();
+        addLoadedClass();
         menuInit();
         tabs();
         showMore();

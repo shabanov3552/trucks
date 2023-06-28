@@ -3,11 +3,398 @@
 .home-page {
    // .home-page__first-block
 
+   // &__first-block {
+   //    background: radial-gradient(50% 50% at 50% 50%, #EEEEEE 0%, #9A9DA9 100%);
+   //    height: 100vh;
+   //    width: 100%;
+   // }
+
+
+   // .home-page__first-block
+
    &__first-block {
-      background: radial-gradient(50% 50% at 50% 50%, #EEEEEE 0%, #9A9DA9 100%);
-      height: 100vh;
-      width: 100%;
+      position: relative;
+      height: 875px;
+
+      @media (max-width:$laptopL) {
+         height: 584px;
+      }
+
+      @media (max-width:$tablet) {
+         height: 429px;
+         margin-top: rem(59);
+      }
+
+      @media (max-width:$mobile) {
+         height: 370px;
+      }
+
+      @media (max-width:$mobileMiddle) {
+         height: 245px;
+      }
    }
+
+   // .home-page__fb-video
+
+   &__fb-video {
+      padding-bottom: 0;
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      @extend %responsiveVideo;
+
+      video {
+         object-fit: cover;
+      }
+   }
+
+   // .home-page__fb-content
+
+   &__fb-content {
+      display: flex;
+      justify-content: flex-end;
+      height: 100%;
+      flex-direction: column;
+      z-index: 1;
+      position: relative;
+      padding-left: rem(120);
+      padding-bottom: rem(107);
+      gap: 35px;
+
+      @media (max-width:$laptopL) {
+         padding-bottom: rem(55);
+         padding-left: rem(100);
+      }
+
+      @media (max-width:$laptop) {
+         padding-left: rem(80);
+         gap: 24px;
+      }
+
+      @media (max-width:$tablet) {
+         padding: rem(12) rem(40) rem(90);
+         justify-content: space-between;
+      }
+
+      @media (max-width:$mobileMiddle) {
+         padding: rem(12) rem(28) rem(80);
+      }
+   }
+
+   // .home-page__fb-messages
+
+   &__fb-messages {
+      color: #fff;
+   }
+
+   // .home-page__fb-message
+
+   &__fb-message {
+      position: absolute;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 28px;
+      transition: opacity 0.3s ease 0s;
+      opacity: 0;
+      z-index: 2;
+
+      @media (max-width:$tablet) {
+         min-height: 60px;
+         display: flex;
+         align-items: center;
+         font-size: 16px;
+         line-height: 20px;
+
+         br {
+            display: none;
+         }
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            right: 57px;
+            width: 35px;
+            height: 25px;
+            background: url(../img/home-page/message.svg) center /contain no-repeat;
+         }
+      }
+
+      &._active {
+         opacity: 1;
+      }
+
+      // .home-page__fb-message_first
+
+      &_first {
+         background: url(../img/home-page/home-page__fb-message_first.png) no-repeat;
+         width: 322px;
+         padding: rem(20) rem(61) rem(20) rem(36);
+         left: 120px;
+         top: 196px;
+         text-align: right;
+
+         @media (max-width:$laptopL) {
+            top: 176px;
+            left: 44px;
+         }
+
+         @media (max-width:$laptop) {
+            left: 0;
+            top: 133px;
+         }
+
+         @media (max-width:$tablet) {
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background: rgba(58, 58, 58, 1);
+            padding: rem(10) rem(30);
+            text-align: left;
+         }
+
+         @media (max-width: em(370)) {
+            padding-right: rem(10);
+            padding-left: rem(10);
+         }
+      }
+
+      // .home-page__fb-message_second
+
+      &_second {
+         text-align: right;
+         background: url(../img/home-page/home-page__fb-message_second.png) no-repeat;
+         left: 120px;
+         top: 310px;
+         width: 286px;
+         padding: rem(21) rem(62) rem(26) rem(31);
+
+         @media (max-width:$laptopL) {
+            top: 176px;
+            left: 44px;
+         }
+
+         @media (max-width:$laptop) {
+            left: 0;
+            top: 133px;
+         }
+
+         @media (max-width:$tablet) {
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background: rgba(58, 58, 58, 1);
+            padding: rem(10) rem(30);
+            text-align: left;
+         }
+
+         @media (max-width: em(370)) {
+            padding-right: rem(10);
+            padding-left: rem(10);
+         }
+      }
+
+      // .home-page__fb-message_third
+
+      &_third {
+         background: url(../img/home-page/home-page__fb-message_third.png) no-repeat;
+         right: 310px;
+         top: 110px;
+         width: 244px;
+         padding: rem(20) rem(31) rem(22) rem(61);
+
+         @media (max-width:$laptopL) {
+            right: 54px;
+            top: 120px;
+         }
+
+         @media (max-width:$laptop) {
+            right: 37px;
+            top: 130px;
+         }
+
+         @media (max-width:$tablet) {
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background: rgba(58, 58, 58, 1);
+            padding: rem(10) rem(30);
+         }
+
+         @media (max-width: em(370)) {
+            padding-right: rem(10);
+            padding-left: rem(10);
+         }
+      }
+
+      // .home-page__fb-message_fourth
+
+      &_fourth {
+         background: url(../img/home-page/home-page__fb-message_fourth.png) no-repeat;
+         right: 310px;
+         top: 255px;
+         width: 243px;
+         padding: rem(20) rem(21) rem(19.5) rem(61);
+
+         @media (max-width:$laptopL) {
+            right: 55px;
+            top: 267px;
+         }
+
+         @media (max-width:$laptop) {
+            right: 37px;
+         }
+
+         @media (max-width:$tablet) {
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background: rgba(58, 58, 58, 1);
+            padding: rem(10) rem(30);
+         }
+
+         @media (max-width: em(370)) {
+            padding-right: rem(10);
+            padding-left: rem(10);
+         }
+      }
+
+      // .home-page__fb-message_fifth
+
+      &_fifth {
+         background: url(../img/home-page/home-page__fb-message_fifth.png) no-repeat;
+         right: 143px;
+         top: 523px;
+         width: 245px;
+         padding: rem(20) rem(44) rem(19.5) rem(61);
+
+         @media (max-width:$laptopL) {
+            right: 54px;
+            top: 362px;
+         }
+
+         @media (max-width:$laptop) {
+            right: 37px;
+         }
+
+         @media (max-width:$tablet) {
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background: rgba(58, 58, 58, 1);
+            padding: rem(10) rem(30);
+         }
+
+         @media (max-width: em(370)) {
+            padding-right: rem(10);
+            padding-left: rem(10);
+         }
+      }
+   }
+
+   // .home-page__fb-title
+
+   &__fb-title {
+      color: #fff;
+      font-size: 30px;
+
+      @media (max-width:$laptopL) {
+         font-size: 24px;
+      }
+
+      @media (max-width:$laptop) {
+         font-size: 20px;
+      }
+
+      @media (max-width:$tablet) {
+         text-align: center;
+         font-size: 16px;
+
+         br {
+            display: none;
+         }
+      }
+   }
+
+   // .home-page__fb-brands
+
+   &__fb-brands {
+      display: grid;
+      grid-template-columns: 227px 350px;
+      grid-template-rows: 65px 43px;
+      column-gap: 53px;
+      row-gap: 46px;
+
+      @media (max-width:$laptopL) {
+         grid-template-columns: 145px 255px;
+         grid-template-rows: 41px 27px;
+         column-gap: 34px;
+         row-gap: 29px;
+      }
+
+      @media (max-width:$laptop) {
+         grid-template-columns: 117px 181px;
+         grid-template-rows: 33px 22px;
+         column-gap: 27px;
+         row-gap: 24px;
+      }
+
+      @media (max-width:$tablet) {
+         grid-template-columns: 76px 118px;
+         grid-template-rows: 22px 14px;
+         column-gap: 18px;
+         row-gap: 15px;
+      }
+
+      @media (max-width:$mobileMiddle) {
+         grid-template-columns: 41px 63px;
+         grid-template-rows: 12px 8px;
+         column-gap: 10px;
+         row-gap: 8px;
+      }
+   }
+
+   // .home-page__fb-brand
+
+   &__fb-brand {
+      &:first-child {
+         grid-column: 1/3;
+         max-width: 478px;
+
+         @media (max-width:$laptopL) {
+            max-width: 307px;
+         }
+
+         @media (max-width:$laptop) {
+            max-width: 248px;
+         }
+
+         @media (max-width:$tablet) {
+            max-width: 161px;
+         }
+
+         @media (max-width:$mobileMiddle) {
+            max-width: 86px;
+         }
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+
 
    //========================================================================================================================================================
 

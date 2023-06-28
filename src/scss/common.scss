@@ -46,7 +46,7 @@
       border: 1px solid rgba(0, 0, 0, 0.524448);
       box-shadow: 0px 0px 0px 6px #FFFFFF, 0px 0px 0px 7px rgba(0, 0, 0, 0.230742), 0px 0px 0px 17px #FFFFFF, 0px 0px 0px 18px rgba(0, 0, 0, 0.0699028);
       border-radius: 10px;
-      padding: rem(21);
+      padding: rem(21) rem(15);
       text-align: center;
 
       &:hover {
@@ -207,6 +207,11 @@
       display: flex;
       gap: 17px;
       align-items: flex-end;
+
+      .truck-cards__slider & {
+         row-gap: 0;
+         flex-wrap: wrap;
+      }
 
       @media (max-width:$mobileSmall) {
          flex-direction: column;
@@ -487,6 +492,99 @@
       &:hover {
          background-color: #fff;
          color: #000;
+      }
+   }
+}
+
+.truck-cards {
+   position: relative;
+   @include adaptiveValue("margin-bottom", 180, 50, 0, 1920, 768);
+
+   @media (min-width:$mobileMiddle) {
+      padding: 0 rem(65);
+   }
+
+   @media (min-width:$tablet) {
+      padding-left: rem(105);
+      padding-right: rem(105);
+   }
+
+   @media (min-width:$laptop) {
+      padding: 0 rem(140);
+   }
+
+   // .truck-cards__slider
+
+   &__slider {
+      padding: 0 rem(20);
+      padding-bottom: rem(20);
+   }
+
+   // .truck-cards__wrapper
+
+   &__wrapper {}
+
+   // .truck-cards__slide
+
+   &__slide {}
+
+   .swiper {}
+
+   .swiper-wrapper {}
+
+   .swiper-slide {}
+
+   .swiper-button-prev {
+      position: absolute;
+      width: 77px;
+      height: 53px;
+      border-radius: 10px;
+      border: 2px solid #858585;
+
+      transform: translate(0px, -100%);
+      top: 0;
+      left: 20px;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+         background: #858585;
+      }
+
+      @media (min-width:$mobileMiddle) {
+         top: 50%;
+         left: 5px;
+         transform: translate(0px, -50%);
+      }
+
+      @media (min-width:$laptop) {
+         left: 35px;
+      }
+   }
+
+   .swiper-button-next {
+      position: absolute;
+      width: 77px;
+      height: 53px;
+      border-radius: 10px;
+      border: 2px solid #858585;
+
+      transform: translate(0px, -100%);
+      top: 0;
+      right: 20px;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+         background: #858585;
+      }
+
+      @media (min-width:$mobileMiddle) {
+         top: 50%;
+         right: 5px;
+         transform: translate(0px, -50%);
+      }
+
+      @media (min-width:$laptop) {
+         right: 35px;
       }
    }
 }
