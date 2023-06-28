@@ -1,0 +1,79 @@
+@@include('html/_header.htm',{
+"title":"О Shacman",
+"modClass":""
+})
+<main class="page about-brand">
+   @@include('html/_breadcrumbs.htm',{})
+   <h1 class="page__title">О Shacman</h1>
+   <div class="about-brand__first-block">
+      <div class="about-brand__fb-image-ibg"><img src="img/about-brand/photo-1.jpg" alt=""></div>
+      <div class="about-brand__fb-image-ibg"><img src="img/about-brand/photo-2.jpg" alt=""></div>
+   </div>
+   <div class="about-brand__container">
+      <div class="about-brand__second-block">
+         <div class="about-brand__descr">
+            <h2 class="about-brand__subtitle">Производство</h2>
+            <div class="about-brand__text-main">Shacman - китайская компания, специализирующаяся на производстве грузовиков высокого качества. Мы известны своими надежными и прочными транспортными средствами, которые широко используются в различных отраслях.</div>
+         </div>
+         <div class="about-brand__col-left">
+            <p>Грузовики Shacman отличаются высокой производительностью, экономичностью и долговечностью. Они оснащены мощными двигателями, усиленными шасси и современными системами безопасности. Большой выбор моделей и конфигураций позволяет удовлетворить потребности различных отраслей, включая строительство, логистику и горнодобывающую промышленность.</p>
+            <p>Производство грузовиков Shacman основано на современных технологиях и строгих стандартах качества. Компания инвестирует в исследования и разработки, чтобы предложить клиентам передовые инновации и улучшенные возможности.</p>
+         </div>
+         <div class="about-brand__col-right">
+            <p>Компания Shacman также уделяет внимание экологической устойчивости и развитию электромобильной технологии. Они работают над разработкой электрических и гибридных вариантов своих грузовиков, чтобы удовлетворить растущий спрос на эко-дружественные транспортные решения.</p>
+            <p>В целом, грузовики Shacman представляют собой надежный и инновационный выбор для предприятий, которым требуется эффективный транспорт с высокой грузоподъемностью и низкими эксплуатационными расходами.</p>
+         </div>
+      </div>
+      <div class="about-brand__video">
+         <video src="files/video/main-video.mp4" autoplay muted loop></video>
+      </div>
+      <div class="about-brand__advantages">
+         <div class="about-brand__row">
+            <div class="about-brand__col">
+               <h2 class="about-brand__subtitle">Наша миссия</h2>
+               <div class="about-brand__text">
+                  <p>Миссия компании Shacman состоит в том, чтобы предоставлять клиентам по всему миру надежные и инновационные грузовики, способствующие эффективной транспортировке грузов и развитию их бизнеса.</p>
+               </div>
+            </div>
+         </div>
+         <div class="about-brand__row">
+            <div class="about-brand__col">
+               <h2 class="about-brand__subtitle">Наша цель</h2>
+               <div class="about-brand__text">
+                  <p>Цель компании Shacman заключается в производстве и предоставлении высококачественных грузовиков, отвечающих потребностям клиентов по всему миру. Они стремятся стать ведущим производителем коммерческой автомобильной техники, предлагая надежные, эффективные и инновационные решения для транспортировки грузов.</p>
+                  <p>Компания Shacman также стремится к постоянному совершенствованию и развитию своих продуктов. Инвестиции в исследования и разработки позволяют им предлагать передовые технологии, улучшенную производительность и экологически устойчивые варианты грузовиков.</p>
+               </div>
+            </div>
+            <div class="about-brand__col">
+               <h2 class="about-brand__subtitle">Наш корпоративный дух</h2>
+               <div class="about-brand__text">
+                  <p>Shacman - компания с сильным корпоративным духом. В ней ценятся командная работа, инновации и стремление к качеству. Коллектив единомышленников, которые поддерживают друг друга и работают вместе для достижения общих целей. Shacman стремится быть лидером в автомобильной индустрии, и вся команда сосредоточена на создании высококачественных и надежных продуктов. Компания инвестирует в развитие своих сотрудников и предоставляет возможности для профессионального роста. В целом, корпоративный дух Shacman отличается энтузиазмом, взаимодействием и стремлением к успеху.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="about-brand__history" style="display: none;">
+      <h2 class="about-brand__subtitle">История бренда Shacman</h2>
+      <!-- Оболочка слайдера -->
+      <div class="about-brand__slider swiper">
+         <!-- Двигающееся часть слайдера -->
+         <div class="about-brand__wrapper swiper-wrapper">
+            <!-- Слайд -->
+            <div class="about-brand__slide swiper-slide">
+               <div class="about-brand__slide-text">Шэньси motor company произвела первый китайский гражданский грузовик SX161, который весил не меньше 12 тонн</div>
+               <div class="about-brand__slide-image-ibg"><img src="img/about-brand/slide-photo-1.jpg" alt=""></div>
+            </div>
+         </div>
+         <!-- Если нужна пагинация -->
+         <div class="swiper-pagination"></div>
+         <!-- Если нужна навигация (влево/вправо) -->
+         <button type="button" class="swiper-button-prev"></button>
+         <button type="button" class="swiper-button-next"></button>
+         <!-- Если нужен скролбар -->
+         <div class="swiper-scrollbar"></div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})
+@@include('html/_popup.htm',{})

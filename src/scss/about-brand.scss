@@ -1,0 +1,231 @@
+.about-brand {
+
+   // .about-brand__first-block
+
+   &__first-block {
+      padding: 0 rem(50);
+      height: 600px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 19px;
+      margin-bottom: rem(70);
+
+      @media (max-width:$laptopL) {
+         height: 390px;
+      }
+
+      @media (max-width:$laptop) {
+         height: 309px;
+         padding: 0 rem(30);
+         gap: 12px;
+      }
+
+      @media (max-width:$tablet) {
+         grid-template-columns: 1fr;
+         height: 512px;
+      }
+
+      @media (max-width:$mobile) {
+         padding: 0;
+         margin-bottom: rem(50);
+      }
+   }
+
+   // .about-brand__fb-image-ibg
+
+   &__fb-image-ibg {}
+
+   // .about-brand__container
+
+   &__container {
+      padding: 0 rem(160);
+
+      @media (max-width:$laptopL) {
+         padding: 0 rem(100);
+      }
+
+      @media (max-width:$laptop) {
+         padding: 0 rem(80);
+      }
+
+      @media (max-width:$mobile) {
+         padding: 0 rem(40);
+      }
+
+      @media (max-width:$mobileMiddle) {
+         padding: 0;
+      }
+   }
+
+   // .about-brand__second-block
+
+   &__second-block {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 100px;
+      margin-bottom: rem(90);
+
+      @media (max-width:$laptopL) {
+         gap: 56px;
+      }
+
+      @media (max-width:$tablet) {
+         grid-template-columns: 1fr;
+         gap: 26px;
+      }
+
+      @media (max-width:$mobileMiddle) {
+         padding: 0 rem(20);
+      }
+   }
+
+   // .about-brand__descr
+
+   &__descr {
+      grid-column: 1/3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 100px;
+
+      @media (max-width:$laptopL) {
+         gap: 56px;
+      }
+
+      @media (max-width:$tablet) {
+         grid-template-columns: 1fr;
+         grid-column: auto;
+         gap: 26px;
+      }
+   }
+
+   // .about-brand__subtitle
+
+   &__subtitle {
+      font-size: 43px;
+
+      .about-brand__advantages & {
+         margin-bottom: rem(33);
+      }
+
+      @media (max-width:$mobile) {
+         font-size: 23px;
+      }
+   }
+
+   // .about-brand__text-main
+
+   &__text-main {
+      font-size: 24px;
+      line-height: 36px;
+
+      @media (max-width:$mobile) {
+         font-size: 20px;
+         line-height: 28px;
+      }
+   }
+
+   // .about-brand__col-left
+
+   &__col-left {
+      line-height: 29px;
+
+      @media (min-width:$tablet) {
+
+         grid-column: 1/2;
+         grid-row: 2/3;
+      }
+
+      p {
+         &:not(:last-child) {
+            margin-bottom: rem(26);
+         }
+      }
+   }
+
+   // .about-brand__col-right
+
+   &__col-right {
+      line-height: 29px;
+
+      @media (min-width:$tablet) {
+
+         grid-column: 2/3;
+         grid-row: 2/3;
+      }
+
+      p {
+         &:not(:last-child) {
+            margin-bottom: rem(26);
+         }
+      }
+   }
+
+   // .about-brand__video
+
+   &__video {
+      @extend %responsiveVideo;
+      padding-bottom: 42.19%;
+      margin-bottom: rem(77);
+
+      @media (max-width:$laptop) {
+         margin-bottom: rem(37);
+      }
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(50);
+      }
+
+      &>* {
+         object-fit: cover;
+      }
+   }
+
+   // .about-brand__advantages
+
+   &__advantages {
+      margin-bottom: rem(126);
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(50);
+      }
+
+      @media (max-width:$mobileMiddle) {
+         padding: 0 rem(20);
+      }
+   }
+
+   // .about-brand__row
+
+   &__row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 165px;
+
+      @media (max-width:$laptopL) {
+         gap: 56px;
+      }
+
+      @media (max-width:$tablet) {
+         grid-template-columns: 1fr;
+         gap: 26px;
+      }
+
+      &:not(:last-child) {
+         margin-bottom: rem(90);
+
+         @media (max-width:$tablet) {
+            margin-bottom: rem(50);
+         }
+      }
+   }
+
+   // .about-brand__col
+
+   &__col {}
+
+   // .about-brand__text
+
+   &__text {
+      line-height: 29px;
+   }
+}
