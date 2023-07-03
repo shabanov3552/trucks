@@ -1,0 +1,66 @@
+@@include('html/_header.htm',{
+"title":"Доставка и оплата",
+"modClass":""
+})
+<main class="page delivery">
+   @@include('html/_breadcrumbs.htm',{})
+   <h1 class="page__title">Доставка и оплата</h1>
+   <div class="delivery__grid">
+      <h2 class="delivery__subtitle">Доставка</h2>
+      <div class="delivery__text">
+         <p>Доставка техники Shacman осуществляется от границы с Китаем. Оттуда машины по желанию заказчика своим ходом перегоняются в любую точку России. Возможна продажа как на приграничной стоянке (в этом случае цена машины будет ниже), так и в пункте эксплуатации машины (в этом случае к цене машины прибавляется цена перегона). Точную стоимость доставки (перегона) машины необходимо просчитывать индивидуально, она меняется взависимости от типа и модификации машины, а также конечной точки доставки. Доставка осуществляется нашими штатными водителями.</p>
+         <p>Вы можете оставить заявку на расчет доставки до интересующего Вас населенного пункта. Наши специалисты произведут нужные расчеты и сообщат Вам стоимость доставки сучетом всех факторов.</p>
+      </div>
+   </div>
+   <div class="delivery__grid">
+      <h2 class="delivery__subtitle">Оплата</h2>
+      <div class="delivery__text">
+         <p>Возможна оплата с помощью наличного и безналичного расчета, а также приобретение техники в <a href="">лизинг</a>.</p>
+      </div>
+   </div>
+   <div class="page-from">
+      <div class="page-from__container">
+         <div class="page-from__col">
+            <h3 class="page-from__title">Оставить заявку</h3>
+            <div class="page-from__descr">Оставьте контактные данные и наши специалисты свяжутся с вами для уточнения деталей</div>
+         </div>
+         <div class="page-from__form">
+            <form action="">
+               <div class="form__line">
+                  <label for="p-callback-1.1" class="form__label">Ваше имя</label>
+                  <input required id="p-callback-1.1" type="text" class="form__input">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__line">
+                  <label for="p-callback-1.2" class="form__label">Контактный номер</label>
+                  <input required id="p-callback-1.2" type="tel" class="form__input js_phone">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__line">
+                  <label for="p-callback-1.3" class="form__label">Комментарий</label>
+                  <textarea data-autoheight id="p-callback-1.3" class="form__input"></textarea>
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__footer">
+                  <button type="submit" class="form__button">Отправить</button>
+                  <div class="form__check checkbox">
+                     <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" checked>
+                        <span class="checkbox__check"></span>
+                        <span class="checkbox__text">Отправляя данные, я даю свое <a href="">согласие на обработку перс. данных</a></span>
+                     </label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})
+@@include('html/_popup.htm',{})

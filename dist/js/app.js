@@ -3275,13 +3275,13 @@
                 if (e.target.closest(".menu__item_dropdown .menu__link")) {
                     e.preventDefault();
                     if (!ddBox.classList.contains("_slide")) {
-                        _slideToggle(ddBox);
+                        _slideToggle(ddBox, 300);
                         dropdown.classList.toggle("dropdown-open");
                         header.classList.toggle("dropdown-open");
                     }
                 }
                 if (!e.target.closest(".menu__item_dropdown .menu__link")) if (!ddBox.classList.contains("_slide")) {
-                    _slideUp(ddBox);
+                    _slideUp(ddBox, 300);
                     dropdown.classList.remove("dropdown-open");
                     header.classList.remove("dropdown-open");
                 }

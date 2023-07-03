@@ -71,7 +71,31 @@ body {
 	}
 
 	// Сайт загружен
-	.loaded & {}
+	.loaded & {
+		.preloader {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+	background-color: #fff;
+	transition: all 0.3s ease 0s;
+
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
 
 // Оболочка wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -104,61 +128,61 @@ body {
 Например header__container, main__container и т.д.
 Снипет (HTML): cnt
 */
-@if ($responsiveType==1) {
+// @if ($responsiveType==1) {
 
-	// Отзывчивая
-	[class*="__container"] {
-		@if ($maxWidthContainer>0) {
-			max-width: rem($containerWidth);
-			margin: 0 auto;
-		}
+// 	// Отзывчивая
+// 	[class*="__container"] {
+// 		@if ($maxWidthContainer>0) {
+// 			max-width: rem($containerWidth);
+// 			margin: 0 auto;
+// 		}
 
-		@if ($containerPadding>0) {
-			@if ($maxWidthContainer>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
+// 		@if ($containerPadding>0) {
+// 			@if ($maxWidthContainer>0) {
+// 				padding: 0 rem(math.div($containerPadding, 2));
+// 			}
 
-			@else {
-				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
-				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
-			}
-		}
-	}
-}
+// 			@else {
+// 				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+// 				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+// 			}
+// 		}
+// 	}
+// }
 
-@else {
+// @else {
 
-	// По брейк-поинтам
-	[class*="__container"] {
-		margin: 0 auto;
+// 	// По брейк-поинтам
+// 	[class*="__container"] {
+// 		margin: 0 auto;
 
-		@if ($maxWidthContainer>0) {
-			max-width: rem($containerWidth);
-		}
+// 		@if ($maxWidthContainer>0) {
+// 			max-width: rem($containerWidth);
+// 		}
 
-		@else {
-			@if ($containerPadding>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
-		}
+// 		@else {
+// 			@if ($containerPadding>0) {
+// 				padding: 0 rem(math.div($containerPadding, 2));
+// 			}
+// 		}
 
-		@media (max-width: $pc) {
-			max-width: rem(970);
-		}
+// 		@media (max-width: $pc) {
+// 			max-width: rem(970);
+// 		}
 
-		@media (max-width: $tablet) {
-			max-width: rem(750);
-		}
+// 		@media (max-width: $tablet) {
+// 			max-width: rem(750);
+// 		}
 
-		@media (max-width: $mobile) {
-			max-width: none;
+// 		@media (max-width: $mobile) {
+// 			max-width: none;
 
-			@if ($containerPadding>0 and $maxWidthContainer>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
-		}
-	}
-}
+// 			@if ($containerPadding>0 and $maxWidthContainer>0) {
+// 				padding: 0 rem(math.div($containerPadding, 2));
+// 			}
+// 		}
+// 	}
+// }
 
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
 // Для подключения/отключения конкретных стилей смотри base.scss
@@ -183,3 +207,7 @@ body {
 @import "about";
 @import "contacts";
 @import "about-brand";
+@import "guarantees";
+@import "manuals";
+@import "parts";
+@import "leasing";

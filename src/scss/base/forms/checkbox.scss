@@ -80,18 +80,6 @@
 					background: rgba(194, 194, 194, 0.26) url(../img/icons/check.svg) center / 15.6px 11.4px no-repeat;
 				}
 
-				& .filter-check__icons {
-					img {
-						&:first-child {
-							display: none;
-						}
-
-						&:last-child {
-							display: block;
-						}
-					}
-				}
-
 				& .filter-check__icon-no-select {
 					display: none;
 				}

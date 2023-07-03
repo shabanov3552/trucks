@@ -1,0 +1,85 @@
+@@include('html/_header.htm',{
+"title":"Запчасти",
+"modClass":""
+})
+<main class="page parts">
+   @@include('html/_breadcrumbs.htm',{})
+   <h1 class="page__title">Запчасти</h1>
+   <div class="parts__descr">
+      <div class="parts__text">
+         <p>Предлагаем купить оригинальные запасные части, расходные материалы для <a href="">проведения ТО</a> в нашей компании. Мы занимаемся исключительно поставкой оригинальных запасных частей, которые прошли проверку отделом качества заводов SHAANXI SHACMAN.</p>
+      </div>
+      <div class="parts__text">
+         <p>В основном, все запасные части к продаваемой нами техники имеются в наличии. В случае если необходимой запасной части нет на складе, мы обязательно закажем необходимую деталь у завода-изготовителя специально для Вас. Для поставки запчастей отправьте заявку суказанием необходимой Вам продукции, адреса для доставки и реквизитов контактного лица.</p>
+      </div>
+   </div>
+   <div class="parts__center-bg">
+      <div class="parts__image-ibg"><img src="img/parts-bg.png" alt=""></div>
+   </div>
+   <div class="parts__descr">
+      <div class="parts__text">
+         <p>В случае если бывает трудно определить наименование запчасти, наши специалисты судовольствием помогут вам правильно сформировать заказ.
+         </p>
+      </div>
+      <div class="parts__text">
+         <p>Отгрузка запчастей производится транспортными компаниями. По вопросам поставки запчастей связываться по контактному телефону: 8 (391) 269-9335 или оставить заявку на нашем сайте. Наши специалисты радостью ответят на все Ваши вопросы.</p>
+      </div>
+   </div>
+   <div class="parts__footer">
+      <div class="parts__icon"><img src="img/icons/parts-ic-1.png" alt=""></div>
+      <div class="parts__icon"><img src="img/icons/parts-ic-2.png" alt=""></div>
+      <div class="parts__icon"><img src="img/icons/parts-ic-3.png" alt=""></div>
+      <div class="parts__icon"><img src="img/icons/parts-ic-4.png" alt=""></div>
+      <div class="parts__icon"><img src="img/icons/parts-ic-5.png" alt=""></div>
+      <div class="parts__icon"><img src="img/icons/parts-ic-6.png" alt=""></div>
+      <div class="parts__icon"><img src="img/icons/parts-ic-7.png" alt=""></div>
+      <div class="parts__icon"><img src="img/icons/parts-ic-8.png" alt=""></div>
+      <div class="parts__icon"><img src="img/icons/parts-ic-9.png" alt=""></div>
+      <div class="parts__icon"><img src="img/icons/parts-ic-10.png" alt=""></div>
+   </div>
+   <div class="page-from">
+      <div class="page-from__container">
+         <div class="page-from__col">
+            <h3 class="page-from__title">Оставить заявку</h3>
+            <div class="page-from__descr">Оставьте контактные данные и наши специалисты свяжутся с вами для уточнения деталей</div>
+         </div>
+         <div class="page-from__form">
+            <form action="">
+               <div class="form__line">
+                  <label for="p-callback-1.1" class="form__label">Ваше имя</label>
+                  <input required id="p-callback-1.1" type="text" class="form__input">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__line">
+                  <label for="p-callback-1.2" class="form__label">Контактный номер</label>
+                  <input required id="p-callback-1.2" type="tel" class="form__input js_phone">
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__line">
+                  <label for="p-callback-1.3" class="form__label">Комментарий</label>
+                  <textarea data-autoheight id="p-callback-1.3" class="form__input"></textarea>
+                  <svg class="form__clear-svg">
+                     <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                  </svg>
+               </div>
+               <div class="form__footer">
+                  <button type="submit" class="form__button">Отправить</button>
+                  <div class="form__check checkbox">
+                     <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" checked>
+                        <span class="checkbox__check"></span>
+                        <span class="checkbox__text">Отправляя данные, я даю свое <a href="">согласие на обработку перс. данных</a></span>
+                     </label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})
+@@include('html/_popup.htm',{})

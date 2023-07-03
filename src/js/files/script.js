@@ -29,16 +29,16 @@ if (dropdown) {
    document.addEventListener("click", function (e) {
       // e.preventDefault()
       if (e.target.closest(".menu__item_dropdown .menu__link")) {
-         e.preventDefault()
+         e.preventDefault();
          if (!ddBox.classList.contains('_slide')) {
-            _slideToggle(ddBox);
+            _slideToggle(ddBox, 300);
             dropdown.classList.toggle('dropdown-open');
             header.classList.toggle('dropdown-open');
          }
       }
       if (!e.target.closest(".menu__item_dropdown .menu__link")) {
          if (!ddBox.classList.contains('_slide')) {
-            _slideUp(ddBox);
+            _slideUp(ddBox, 300);
             dropdown.classList.remove('dropdown-open');
             header.classList.remove('dropdown-open');
          }
@@ -48,58 +48,13 @@ if (dropdown) {
 
 //#endregion
 
-//#region Плавающая линия для табов
-
-
-// document.querySelectorAll(".float-line").forEach(e => {
-//    floatLine(e)
-// });
-
-// function floatLine(node) {
-//    if (!node) return
-
-//    node.addEventListener("mouseover", (e) => {
-//       if (e.target.classList.contains("float-line__item")) {
-//          if (node.closest('.float-line__horizontal')) {
-//             node.style.setProperty(
-//                "--underline-offset-y",
-//                `${e.target.offsetTop}px`
-//             );
-//             node.style.setProperty(
-//                "--underline-height",
-//                `${e.target.offsetHeight}px`
-//             );
-//          } else {
-//             node.style.setProperty(
-//                "--underline-width",
-//                `${e.target.offsetWidth}px`
-//             );
-//             node.style.setProperty(
-//                "--underline-offset-x",
-//                `${e.target.offsetLeft}px`
-//             );
-//          }
-//       }
-//    });
-//    node.addEventListener("mouseleave", () => {
-//       if (node.closest('.float-line__horizontal')) {
-//          node.style.setProperty("--underline-height", "0")
-//       } else {
-//          node.style.setProperty("--underline-width", "0")
-//       }
-//    });
-// }
-
-//#endregion
-
 //#region Шаринг в деталке
-
 
 let shareButton = document.getElementById('share-button');
 if (shareButton) {
 
 
-   let thisUrl = window.location.href
+   let thisUrl = window.location.href;
    let thisTitle = document.title;
    shareButton.addEventListener('click', function () {
       // Проверка поддержки navigator.share
@@ -115,13 +70,13 @@ if (shareButton) {
             })
             .catch(function () {
                // Sharing failed
-            })
+            });
 
       } else {
          flsModules.popup.open('#share-popup');
          copyUrl();
       }
-   })
+   });
 }
 function copyUrl() {
    const copyButton = document.querySelector('.share__button');
@@ -148,31 +103,15 @@ function copyUrl() {
 const video = document.querySelector(".home-page__fb-video video");
 
 if (video) {
-   // video.addEventListener("ended", (e) => {
-   //    console.log(e);
-   //    startAnim();
-   // });
-   // video.addEventListener("waiting", (e) => {
-   //    console.log(e);
-   // })
-   // video.addEventListener("pause", (e) => {
-   //    console.log(e);
-   // })
-   // video.addEventListener("suspend", (e) => {
-   //    console.log(e);
-   // })
-   // video.addEventListener("error", (e) => {
-   //    console.log(e);
-   // })
    video.addEventListener("timeupdate", (e) => {
       if (e.target.currentTime <= 0.1) {
          startAnim();
       }
-   })
+   });
 }
 
 export function startAnim() {
-   if (!video) return
+   if (!video) return;
 
    const messageFirst = document.querySelector('.home-page__fb-message_first'),
       messageSecond = document.querySelector('.home-page__fb-message_second'),

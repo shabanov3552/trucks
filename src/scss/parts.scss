@@ -1,0 +1,88 @@
+.parts {
+   // .parts__descr
+
+   &__descr {
+      @include adaptiveValue("padding-left", 160, 20, 0, 1920, 500);
+      @include adaptiveValue("padding-right", 160, 20, 0, 1920, 500);
+      margin-top: rem(66);
+      margin-bottom: rem(80);
+      display: grid;
+      gap: 150px;
+      grid-template-columns: 1fr 1.51fr;
+
+      @media (max-width:$tablet) {
+         margin-bottom: rem(40);
+         margin-top: 0;
+      }
+
+      @media (max-width:$tablet) {
+         gap: 25px;
+         grid-template-columns: 1fr;
+      }
+   }
+
+   // .parts__text
+
+   &__text {
+      line-height: 29px;
+
+      a {
+         color: #CF1235;
+
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+
+   // .parts__center-bg
+
+   &__center-bg {
+      @include adaptiveValue("padding-left", 160, 20, 0, 1920, 500);
+      @include adaptiveValue("padding-right", 160, 20, 0, 1920, 500);
+      margin-bottom: rem(40);
+   }
+
+   // .parts__image-ibg
+
+   &__image-ibg {
+      padding-bottom: 32%;
+   }
+
+   // .parts__footer
+
+   &__footer {
+      @include adaptiveValue("padding-left", 160, 20, 0, 1920, 500);
+      @include adaptiveValue("padding-right", 160, 20, 0, 1920, 500);
+      display: grid;
+      gap: 64px;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      margin-bottom: rem(150);
+
+      @media (max-width:$tablet) {
+         grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+         margin-bottom: rem(50);
+         gap: 25px;
+      }
+
+      @media (max-width:$mobileSmall) {
+         gap: 20px;
+      }
+   }
+
+   // .parts__icon
+
+   &__icon {
+      width: 100px;
+      height: 100px;
+
+      @media (max-width:$tablet) {
+         width: 50px;
+         height: 50px;
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+}

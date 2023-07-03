@@ -5,17 +5,13 @@
    max-width: 1920px;
    margin: 0 auto;
    padding: 0 rem(15);
-   margin-top: rem(116);
+   margin-top: rem(155);
    margin-bottom: rem(20);
    display: flex;
    justify-content: center;
 
    .menu-open & {
       z-index: 1;
-   }
-
-   @media (max-width:$laptopL) {
-      margin-top: rem(155);
    }
 
    @media (max-width:$laptop) {
