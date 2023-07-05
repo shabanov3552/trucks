@@ -268,7 +268,7 @@
          margin-bottom: rem(15);
       }
 
-      @media (max-width: em(375)) {
+      @media (max-width: em(370)) {
          padding: 0 rem(20);
       }
    }
@@ -293,6 +293,44 @@
    &__slider {
       position: relative;
       z-index: 2;
+
+      .swiper-button-prev,
+      .swiper-button-next {
+         position: absolute;
+         top: 65px;
+      }
+
+      .swiper-button-prev {
+         left: 208px;
+
+         @media (max-width:$laptop) {
+            left: 75px;
+         }
+
+         @media (max-width:$tablet) {
+            left: 10px;
+         }
+
+         @media (max-width:$mobile) {
+            left: 0px;
+         }
+      }
+
+      .swiper-button-next {
+         right: 208px;
+
+         @media (max-width:$laptop) {
+            right: 75px;
+         }
+
+         @media (max-width:$tablet) {
+            right: 10px;
+         }
+
+         @media (max-width:$mobile) {
+            right: 0px;
+         }
+      }
    }
 
    // .about-brand__wrapper
@@ -324,7 +362,7 @@
          margin-bottom: rem(40);
       }
 
-      @media (max-width: em(375)) {
+      @media (max-width: em(370)) {
          padding: 0 rem(20);
       }
    }
@@ -384,13 +422,3 @@
       }
    }
 }
-
-.swiper {}
-
-.swiper-wrapper {}
-
-.swiper-slide {}
-
-.swiper-button-prev {}
-
-.swiper-button-next {}
