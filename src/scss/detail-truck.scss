@@ -283,7 +283,10 @@
       font-weight: 500;
       font-size: 28px;
       line-height: 34px;
-      text-decoration: line-through #CF1235 3px;
+      // text-decoration: line-through #CF1235 3px;
+      text-decoration-thickness: 3px;
+      text-decoration-color: rgb(207, 18, 53);
+      text-decoration-line: line-through;
    }
 
    // .truck-detail__main-price
@@ -338,7 +341,8 @@
       right: -85px;
 
       @media (max-width:$tablet) {
-         display: none;
+         position: static;
+         align-self: flex-end;
       }
    }
 
@@ -471,6 +475,11 @@
       font-size: 43px;
       line-height: 52px;
       margin-bottom: rem(36);
+
+      @media (max-width:$mobile) {
+         font-size: 23px;
+         line-height: 30px;
+      }
    }
 
    // .specifications__navigation

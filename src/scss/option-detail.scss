@@ -151,12 +151,14 @@
 
    &__video {
       padding-bottom: 0;
-      @include adaptiveValue("height", 711, 594, 0, 1920, 1440);
-      margin: 0px rem(110);
-      @extend %responsiveVideo;
+      max-width: 1280px;
+      margin: 0px auto;
       margin-bottom: rem(78);
+      @include adaptiveValue("height", 711, 594, 0, 1920, 1440);
+      @extend %responsiveVideo;
 
       @media (max-width:$laptop) {
+         margin: 0px rem(110);
          height: 466px;
       }
 
@@ -388,7 +390,10 @@
    // .option-product__old-price
 
    &__old-price {
-      text-decoration: line-through 3px #CF1235;
+      // text-decoration: line-through #CF1235 3px;
+      text-decoration-thickness: 3px;
+      text-decoration-color: rgb(207, 18, 53);
+      text-decoration-line: line-through;
    }
 
    // .option-product__main-price

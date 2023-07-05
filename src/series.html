@@ -13,9 +13,7 @@
       <div class="series__subtitle">Идеальный баланс мощности и комфорта</div>
    </div>
    <div class="series__second-block">
-      <div class="series__video">
-         <video src="files/video/slide-video-1.mp4" autoplay muted loop></video>
-      </div>
+      <div class="series__video" data-popup="#video" data-popup-youtube="ioxxFL_SDjc"></div>
       <div class="series__sb-col">
          <div class="series__sb-top">
             <p>Автомобили серии Х3000 имеют принципиально новый дизайн и конструкцию. </p>
@@ -120,16 +118,16 @@
             <div class="page-from__descr">Оставьте контактные данные и наши специалисты свяжутся с вами для уточнения деталей</div>
          </div>
          <div class="page-from__form">
-            <form action="">
+            <form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
                <div class="form__line">
-                  <label for="p-callback-1.1" class="form__label">Ваше имя *</label>
+                  <label for="p-callback-1.1" class="form__label">Ваше имя</label>
                   <input required id="p-callback-1.1" type="text" class="form__input">
                   <svg class="form__clear-svg">
                      <use xlink:href="img/icons/icons.svg#input_clear"></use>
                   </svg>
                </div>
                <div class="form__line">
-                  <label for="p-callback-1.2" class="form__label">Контактный номер *</label>
+                  <label for="p-callback-1.2" class="form__label">Контактный номер</label>
                   <input required id="p-callback-1.2" type="tel" class="form__input js_phone">
                   <svg class="form__clear-svg">
                      <use xlink:href="img/icons/icons.svg#input_clear"></use>

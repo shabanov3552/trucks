@@ -1,11 +1,13 @@
-<div id="popup" aria-hidden="true" class="popup">
+<div id="video" aria-hidden="true" class="popup video-popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">
-				<img src="img/icons/close-modal.svg" alt="">
-			</button>
-			<div class="popup__text">
-				Text
+			<div class="popup__header">
+				<button data-close type="button" class="popup__close">
+					<img src="img/icons/close-modal.svg" alt="">
+				</button>
+			</div>
+			<div data-popup-youtube-place class="popup__video">
+
 			</div>
 		</div>
 	</div>
@@ -54,17 +56,17 @@
 			<div class="popup__main">
 				<div class="popup__text">Заполните форму обратной связи и наши специалисты свяжутся с вами для уточнения деталей</div>
 				<div class="popup__form">
-					<form action="">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
 						<div class="form__line">
-							<label for="p-callback-1.1" class="form__label">Ваше имя</label>
-							<input id="p-callback-1.1" type="text" class="form__input">
+							<label for="p-callback-1.1" class="form__label">Ваше имя *</label>
+							<input required id="p-callback-1.1" type="text" class="form__input">
 							<svg class="form__clear-svg">
 								<use xlink:href="img/icons/icons.svg#input_clear"></use>
 							</svg>
 						</div>
 						<div class="form__line">
-							<label for="p-callback-1.2" class="form__label">Контактный номер</label>
-							<input id="p-callback-1.2" type="tel" class="form__input js_phone">
+							<label for="p-callback-1.2" class="form__label">Контактный номер *</label>
+							<input required id="p-callback-1.2" type="tel" class="form__input js_phone">
 							<svg class="form__clear-svg">
 								<use xlink:href="img/icons/icons.svg#input_clear"></use>
 							</svg>
@@ -104,7 +106,7 @@
 			<div class="popup__main">
 				<div class="popup__text">Заполните форму обратной связи и наши специалисты свяжутся с вами для уточнения деталей</div>
 				<div class="popup__form">
-					<form action="">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
 						<div class="form__line">
 							<label for="p-callback-2.1" class="form__label">Ваше имя</label>
 							<input id="p-callback-2.1" type="text" class="form__input">
@@ -147,7 +149,7 @@
 			<div class="popup__main">
 				<div class="popup__text">Оставьте контактные данные и наши специалисты свяжутся с вами для уточнения деталей</div>
 				<div class="popup__form">
-					<form action="">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
 						<div class="form__line">
 							<label for="p-callback-2.1" class="form__label">Ваше имя</label>
 							<input id="p-callback-2.1" type="text" class="form__input">
@@ -190,7 +192,7 @@
 			<div class="popup__main">
 				<div class="popup__text">Наши специалисты подробно расскажут о всех особенностях данной модели</div>
 				<div class="popup__form">
-					<form action="">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
 						<div class="form__line">
 							<label for="p-callback-2.1" class="form__label">Ваше имя</label>
 							<input id="p-callback-2.1" type="text" class="form__input">

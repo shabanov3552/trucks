@@ -11,8 +11,10 @@
          padding: 0 rem(80);
       }
 
-      @include adaptiveValue("padding-left", 80, 20, 0, 1000, 768);
-      @include adaptiveValue("padding-right", 80, 20, 0, 1000, 768);
+      @media (max-width:$tablet) {
+         @include adaptiveValue("padding-left", 80, 20, 0, 1000, 768);
+         @include adaptiveValue("padding-right", 80, 20, 0, 1000, 768);
+      }
    }
 
    // .catalog__filters
@@ -38,13 +40,16 @@
    // .catalog__filters-form
 
    &__filters-form {
-      background: url(../img/catalog/filters-bg.png)top left / 100% 100% no-repeat;
       padding: rem(25);
       padding-left: rem(60);
       padding-right: rem(43);
       display: grid;
       gap: 8px;
       grid-template-columns: repeat(2, 1fr) 225px 202px;
+
+      @media (min-width:$mobile) {
+         background: url(../img/catalog/filters-bg.png)top left / 100% 100% no-repeat;
+      }
 
       @media (max-width: em(1650)) {
          grid-template-columns: repeat(2, 1fr);
@@ -68,7 +73,6 @@
 
       @media (max-width:$mobileMiddle) {
          padding: 0;
-         background: none;
       }
    }
 
@@ -151,6 +155,11 @@
       line-height: 22px;
       margin: 0px rem(7.5);
       min-height: 56px;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+         background: #a80e2b;
+      }
    }
 
    // .catalog__btn-reset
@@ -160,6 +169,10 @@
       font-weight: 600;
       font-size: 18px;
       line-height: 22px;
+
+      &:hover {
+         text-decoration: underline;
+      }
    }
 
    // .catalog__cards

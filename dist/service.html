@@ -8,8 +8,8 @@
 	<!-- <style>body{opacity: 0;}</style> -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap&_v=20230703194359" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230703194359">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap&_v=20230705184709" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230705184709">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -137,7 +137,7 @@
 						<div class="page-from__descr">Чтобы воспользоваться услугами сервисного центра заполните форму обратной связи или свяжитесь с нами по номеру телефона (391) 269-9335</div>
 					</div>
 					<div class="page-from__form">
-						<form action="">
+						<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
 							<div class="form__line">
 								<label for="p-callback-1.1" class="form__label">Ваше имя *</label>
 								<input required id="p-callback-1.1" type="text" class="form__input">
@@ -270,18 +270,21 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230703194359"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230705184709" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230705184709"></script>
 </body>
 
 </html>
-<div id="popup" aria-hidden="true" class="popup">
+<div id="video" aria-hidden="true" class="popup video-popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">
-				<img src="img/icons/close-modal.svg" alt="">
-			</button>
-			<div class="popup__text">
-				Text
+			<div class="popup__header">
+				<button data-close type="button" class="popup__close">
+					<img src="img/icons/close-modal.svg" alt="">
+				</button>
+			</div>
+			<div data-popup-youtube-place class="popup__video">
+
 			</div>
 		</div>
 	</div>
@@ -299,7 +302,7 @@
 				<div class="share">
 					<div class="share__social">
 						<!-- uSocial -->
-						<script async src="https://usocial.pro/usocial/usocial.js?uid=21cd4b58eaf61697&v=6.1.5&_v=20230703194359" data-script="usocial" charset="utf-8"></script>
+						<script async src="https://usocial.pro/usocial/usocial.js?uid=21cd4b58eaf61697&v=6.1.5&_v=20230705184709" data-script="usocial" charset="utf-8"></script>
 						<div class="uSocial-Share" data-pid="b7450283dbc9e941ee22b283d6036804" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter0,nomobile,mobile_position_right" data-social="vk,ok,telegram,wa,vi"></div>
 						<!-- /uSocial -->
 					</div>
@@ -330,17 +333,17 @@
 			<div class="popup__main">
 				<div class="popup__text">Заполните форму обратной связи и наши специалисты свяжутся с вами для уточнения деталей</div>
 				<div class="popup__form">
-					<form action="">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
 						<div class="form__line">
-							<label for="p-callback-1.1" class="form__label">Ваше имя</label>
-							<input id="p-callback-1.1" type="text" class="form__input">
+							<label for="p-callback-1.1" class="form__label">Ваше имя *</label>
+							<input required id="p-callback-1.1" type="text" class="form__input">
 							<svg class="form__clear-svg">
 								<use xlink:href="img/icons/icons.svg#input_clear"></use>
 							</svg>
 						</div>
 						<div class="form__line">
-							<label for="p-callback-1.2" class="form__label">Контактный номер</label>
-							<input id="p-callback-1.2" type="tel" class="form__input js_phone">
+							<label for="p-callback-1.2" class="form__label">Контактный номер *</label>
+							<input required id="p-callback-1.2" type="tel" class="form__input js_phone">
 							<svg class="form__clear-svg">
 								<use xlink:href="img/icons/icons.svg#input_clear"></use>
 							</svg>
@@ -380,7 +383,7 @@
 			<div class="popup__main">
 				<div class="popup__text">Заполните форму обратной связи и наши специалисты свяжутся с вами для уточнения деталей</div>
 				<div class="popup__form">
-					<form action="">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
 						<div class="form__line">
 							<label for="p-callback-2.1" class="form__label">Ваше имя</label>
 							<input id="p-callback-2.1" type="text" class="form__input">
@@ -423,7 +426,7 @@
 			<div class="popup__main">
 				<div class="popup__text">Оставьте контактные данные и наши специалисты свяжутся с вами для уточнения деталей</div>
 				<div class="popup__form">
-					<form action="">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
 						<div class="form__line">
 							<label for="p-callback-2.1" class="form__label">Ваше имя</label>
 							<input id="p-callback-2.1" type="text" class="form__input">
@@ -466,7 +469,7 @@
 			<div class="popup__main">
 				<div class="popup__text">Наши специалисты подробно расскажут о всех особенностях данной модели</div>
 				<div class="popup__form">
-					<form action="">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
 						<div class="form__line">
 							<label for="p-callback-2.1" class="form__label">Ваше имя</label>
 							<input id="p-callback-2.1" type="text" class="form__input">

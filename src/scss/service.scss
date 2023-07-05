@@ -6,6 +6,8 @@
       padding: 0 rem(148);
       max-height: 513px;
       margin-bottom: rem(111);
+      display: flex;
+      justify-content: center;
 
       @media (max-width:$laptopL) {
          padding: 0 rem(48);

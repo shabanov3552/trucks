@@ -229,3 +229,168 @@
       line-height: 29px;
    }
 }
+
+.about-brand {
+
+   // .about-brand__history
+
+   &__history {
+      position: relative;
+   }
+
+   // .about-brand__subtitle
+
+   &__subtitle {
+      .about-brand__history & {
+         text-align: center;
+         margin-bottom: rem(58);
+      }
+   }
+
+   // .about-brand__pagination
+
+   &__pagination {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: rem(44);
+      padding: 0 rem(50);
+
+      @media (max-width:$tablet) {
+         gap: 10px;
+      }
+
+      @media (max-width:$mobile) {
+         gap: 5px;
+         margin-bottom: rem(15);
+      }
+
+      @media (max-width: em(375)) {
+         padding: 0 rem(20);
+      }
+   }
+
+   // .about-brand__pagination-bullet
+
+   &__pagination-bullet {
+      color: #fff;
+      padding: rem(4.5) rem(11);
+      border-radius: 10px;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+
+      &._active,
+      &:hover {
+         background: #CF1235;
+      }
+   }
+
+   // .about-brand__slider
+
+   &__slider {
+      position: relative;
+      z-index: 2;
+   }
+
+   // .about-brand__wrapper
+
+   &__wrapper {}
+
+   // .about-brand__slide
+
+   &__slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   // .about-brand__slide-text
+
+   &__slide-text {
+      max-width: 726px;
+      font-size: 20px;
+      line-height: 30px;
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: rem(50);
+
+      @media (max-width:$mobile) {
+         padding: 0 rem(50);
+         margin-bottom: rem(40);
+      }
+
+      @media (max-width: em(375)) {
+         padding: 0 rem(20);
+      }
+   }
+
+   // .about-brand__slide-image-ibg
+
+   &__slide-image-ibg {
+      width: 570px;
+      height: 382px;
+
+      @media (max-width:$mobile) {
+         height: 251px;
+         width: 375px;
+      }
+   }
+}
+
+.about-brand-years {
+   // .about-brand-years__slider
+
+   &__slider {
+      min-width: 1920px;
+      background: #3A3A3A;
+      position: relative;
+      @include adaptiveValue("left", 0, -310, 0, 1920, 1280);
+      pointer-events: none;
+      z-index: 1;
+      margin-bottom: rem(-430);
+
+      @media (max-width:$laptop) {
+         @include adaptiveValue("left", -310, -470, 0, 1280, 1000);
+      }
+
+      @media (max-width:$mobile) {
+         margin-bottom: rem(-280);
+         @include adaptiveValue("left", -470, -760, 0, 1000, 375);
+      }
+   }
+
+   // .about-brand-years__wrapper
+
+   &__wrapper {}
+
+   // .about-brand-years__slide
+
+   &__slide {
+      color: #F5F5F5;
+      opacity: 0.04999999701976776;
+      font-weight: 700;
+      font-size: 566px;
+      text-align: center;
+      line-height: 517px;
+
+      @media (max-width:$mobile) {
+         font-size: 216px;
+         line-height: 316px;
+      }
+   }
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}

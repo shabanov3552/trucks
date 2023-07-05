@@ -47,12 +47,14 @@ textarea {
 }
 
 button {
+	outline: none;
 	cursor: pointer;
 	color: inherit;
 	background-color: transparent;
 }
 
 a {
+	outline: none;
 	color: inherit;
 	text-decoration: none;
 }

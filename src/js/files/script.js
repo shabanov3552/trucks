@@ -99,6 +99,7 @@ function copyUrl() {
 
 //#endregion
 
+//#region запуск анимации на главном экране
 
 const video = document.querySelector(".home-page__fb-video video");
 
@@ -154,3 +155,83 @@ export function startAnim() {
       video.currentTime = 0;
    }, 12900);
 }
+
+//#endregion
+
+//#region render video preview in video gallery
+
+class YouTubeVideoPreview {
+   constructor(videoId, element) {
+      this.element = element;
+      this.apiKey = "AIzaSyAwGUSLR-S7iSRFO6JDZwlEskC_5M6zeys";
+      this.videoId = videoId;
+      this.url = `https://www.googleapis.com/youtube/v3/videos?id=${this.videoId}&part=snippet&key=${this.apiKey}`;
+      this.imgSrc = '';
+      this.title = '';
+      this.date = '';
+   }
+
+   getVideoData() {
+
+      let res = fetch(this.url).then(r => r.json());
+
+      if (res.status === "error") {
+         console.error(res);
+      } else {
+         res.then(json => {
+            this.title = json.items[0].snippet.title;
+            let date = new Date(json.items[0].snippet.publishedAt);
+            this.date = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+            this.imgSrc = json.items[0].snippet.thumbnails.maxres.url;
+            this.renderPreview();
+         });
+      }
+   }
+
+   renderPreview() {
+      let html;
+      if (this.element.classList.contains('broadcast')) {
+         html = `
+         <div class="broadcast__text">
+            <p>Трансляция со склада</p>
+         </div>
+         <div class="broadcast__video">
+            <img src="${this.imgSrc}" alt="">
+         </div>`
+      } else {
+         html = `
+         <div class="video__image-ibg"><img src="${this.imgSrc}" alt=""></div>
+         <div class="video__play-btn">
+            <img src="img/play-btn.png" alt="">
+         </div>`;
+      }
+      this.element.innerHTML = html;
+   }
+}
+
+const videos = document.querySelectorAll("[data-popup-youtube]");
+if (videos.length > 0) {
+   videos.forEach(video => {
+      let preview = new YouTubeVideoPreview(video.dataset.popupYoutube, video);
+      preview.getVideoData();
+   });
+}
+
+//#endregion
+
+//#region Кнопка вверх и лого
+
+
+// window.addEventListener('scroll', buttonToTop);
+// function buttonToTop(e) {
+//    let btnTop = document.querySelector('.broadcast');
+//    let scr_val = window.pageYOffset + document.documentElement.clientHeight;
+//    let scrollHeight = Math.max(
+//       document.body.scrollHeight, document.documentElement.scrollHeight,
+//       document.body.offsetHeight, document.documentElement.offsetHeight,
+//       document.body.clientHeight, document.documentElement.clientHeight
+//    );
+//    scr_val == scrollHeight ? btnTop.classList.add('_active') : btnTop.classList.remove('_active');
+// };
+
+//#endregion

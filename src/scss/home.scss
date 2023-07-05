@@ -129,12 +129,15 @@
       // .home-page__fb-message_first
 
       &_first {
-         background: url(../img/home-page/home-page__fb-message_first.png) no-repeat;
          width: 322px;
          padding: rem(20) rem(61) rem(20) rem(36);
          left: 120px;
          top: 196px;
          text-align: right;
+
+         @media (min-width:$tablet) {
+            background: url(../img/home-page/home-page__fb-message_first.png) no-repeat;
+         }
 
          @media (max-width:$laptopL) {
             top: 176px;
@@ -167,11 +170,14 @@
 
       &_second {
          text-align: right;
-         background: url(../img/home-page/home-page__fb-message_second.png) no-repeat;
          left: 120px;
          top: 310px;
          width: 286px;
          padding: rem(21) rem(62) rem(26) rem(31);
+
+         @media (min-width:$tablet) {
+            background: url(../img/home-page/home-page__fb-message_second.png) no-repeat;
+         }
 
          @media (max-width:$laptopL) {
             top: 176px;
@@ -203,11 +209,14 @@
       // .home-page__fb-message_third
 
       &_third {
-         background: url(../img/home-page/home-page__fb-message_third.png) no-repeat;
          right: 310px;
          top: 110px;
          width: 244px;
          padding: rem(20) rem(31) rem(22) rem(61);
+
+         @media (min-width:$tablet) {
+            background: url(../img/home-page/home-page__fb-message_third.png) no-repeat;
+         }
 
          @media (max-width:$laptopL) {
             right: 54px;
@@ -238,11 +247,14 @@
       // .home-page__fb-message_fourth
 
       &_fourth {
-         background: url(../img/home-page/home-page__fb-message_fourth.png) no-repeat;
          right: 310px;
          top: 255px;
          width: 243px;
          padding: rem(20) rem(21) rem(19.5) rem(61);
+
+         @media (min-width:$tablet) {
+            background: url(../img/home-page/home-page__fb-message_fourth.png) no-repeat;
+         }
 
          @media (max-width:$laptopL) {
             right: 55px;
@@ -272,11 +284,14 @@
       // .home-page__fb-message_fifth
 
       &_fifth {
-         background: url(../img/home-page/home-page__fb-message_fifth.png) no-repeat;
          right: 143px;
          top: 523px;
          width: 245px;
          padding: rem(20) rem(44) rem(19.5) rem(61);
+
+         @media (min-width:$tablet) {
+            background: url(../img/home-page/home-page__fb-message_fifth.png) no-repeat;
+         }
 
          @media (max-width:$laptopL) {
             right: 54px;
@@ -1625,6 +1640,7 @@
    &__company-text {
       font-size: 14px;
       line-height: 22px;
+      text-align: center;
    }
 
 }

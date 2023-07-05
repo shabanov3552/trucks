@@ -109,7 +109,9 @@ body::after {
 
 	// .popup__close
 
-	&__close {}
+	&__close {
+		outline: none;
+	}
 
 	// .popup__main
 
@@ -130,4 +132,26 @@ body::after {
 	// .popup__form
 
 	&__form {}
+
+	// .popup__video
+
+	&__video {
+		width: 100%;
+		height: calc(100vh - 200px);
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.video-popup {
+	.popup__content {
+		max-width: 100%;
+	}
+
+	.popup__header {
+		justify-content: flex-end;
+	}
 }

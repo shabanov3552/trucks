@@ -49,6 +49,11 @@
 		color: #fff;
 		padding-left: rem(16);
 		padding-right: rem(50);
+		outline: none;
+
+		&.parsley-error {
+			border: 4px solid #CF1235;
+		}
 	}
 
 	// .form__clear-svg
@@ -167,6 +172,11 @@
 				}
 			}
 		}
+	}
+
+	.parsley-errors-list {
+		color: #CF1235;
+		margin-top: rem(10);
 	}
 }
 
