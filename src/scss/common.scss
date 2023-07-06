@@ -92,19 +92,27 @@
    right: 0;
    display: flex;
    align-items: center;
-   z-index: 100;
+   z-index: 10000;
    transition: all 0.3s ease 0s;
 
    &._active {
       bottom: 70px;
 
+      @media (max-width:$laptopL) {
+         bottom: 50px;
+      }
+
       @media (max-width:$laptop) {
-         bottom: 100px;
+         bottom: 60px;
+      }
+
+      @media (max-width:$tablet) {
+         bottom: 0;
       }
    }
 
    @media (max-width:$tablet) {
-      z-index: 1000;
+      // z-index: 1000;
       background: #EBEBEB;
       transition: all 0.3s ease 0s;
       width: 100%;

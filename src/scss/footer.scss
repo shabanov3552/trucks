@@ -207,6 +207,11 @@
          align-items: center;
          gap: 7px;
          color: #757575;
+
+         @media (max-width:$laptop) and (min-width:$tablet) {
+            grid-row: 2/3;
+            grid-column: 3/4;
+         }
       }
    }
 

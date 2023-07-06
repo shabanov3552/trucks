@@ -3380,6 +3380,13 @@
             let preview = new YouTubeVideoPreview(video.dataset.popupYoutube, video);
             preview.getVideoData();
         }));
+        window.addEventListener("scroll", buttonToTop);
+        function buttonToTop(e) {
+            let btnTop = document.querySelector(".broadcast");
+            let scr_val = window.pageYOffset + document.documentElement.clientHeight;
+            let scrollHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
+            scr_val >= scrollHeight - 50 ? btnTop.classList.add("_active") : btnTop.classList.remove("_active");
+        }
         function isWebp() {
             function testWebP(callback) {
                 let webP = new Image;
@@ -11081,7 +11088,7 @@ PERFORMANCE OF THIS SOFTWARE.
             lte: "Это значение должно быть меньше или равно.",
             notequalto: "Это значение должно отличаться."
         });
-        window["FLS"] = false;
+        window["FLS"] = true;
         isWebp();
         addLoadedClass();
         menuInit();
