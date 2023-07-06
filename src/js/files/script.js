@@ -221,17 +221,18 @@ if (videos.length > 0) {
 
 //#region Кнопка вверх и лого
 
+if (document.querySelector('.broadcast')) {
 
-window.addEventListener('scroll', buttonToTop);
-function buttonToTop(e) {
-   let btnTop = document.querySelector('.broadcast');
-   let scr_val = window.pageYOffset + document.documentElement.clientHeight;
-   let scrollHeight = Math.max(
-      document.body.scrollHeight, document.documentElement.scrollHeight,
-      document.body.offsetHeight, document.documentElement.offsetHeight,
-      document.body.clientHeight, document.documentElement.clientHeight
-   );
-   scr_val >= (scrollHeight - 50) ? btnTop.classList.add('_active') : btnTop.classList.remove('_active');
-};
-
+   let buttonToTop = function (e) {
+      let btnTop = document.querySelector('.broadcast');
+      let scr_val = window.pageYOffset + document.documentElement.clientHeight;
+      let scrollHeight = Math.max(
+         document.body.scrollHeight, document.documentElement.scrollHeight,
+         document.body.offsetHeight, document.documentElement.offsetHeight,
+         document.body.clientHeight, document.documentElement.clientHeight
+      );
+      scr_val >= (scrollHeight - 50) ? btnTop.classList.add('_active') : btnTop.classList.remove('_active');
+   };
+   window.addEventListener('scroll', buttonToTop);
+}
 //#endregion
