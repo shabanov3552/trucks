@@ -34,7 +34,7 @@
    &__top {
       @include adaptiveValue("font-size", 28, 22, 0, 1920, 768);
       @include adaptiveValue("line-height", 45, 27, 0, 1920, 768);
-      margin-bottom: rem(60);
+
       // min-height: 135px;
       flex: 1 1 auto;
 
@@ -62,6 +62,10 @@
       display: block;
       @include adaptiveValue("font-size", 43, 23, 0, 1920, 768);
       @include adaptiveValue("line-height", 52, 28, 0, 1920, 768);
+
+      @media screen and (min-width: 1280.98px) and (max-width: 2000px) {
+         min-height: 5.5vw;
+      }
    }
 
    // .option-card__descr
@@ -76,6 +80,7 @@
    &__footer {
       display: flex;
       align-items: center;
+      margin-top: auto;
 
       @media (max-width:$mobile) {
          display: grid;
@@ -126,6 +131,25 @@
       img {
          width: 100%;
       }
+   }
+}
+
+.options-block {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   margin-bottom: rem(40);
+   @include adaptiveValue("gap", 230, 100, 0, 1920, 1440);
+   @include adaptiveValue("padding-left", 150, 80, 0, 1920, 1440);
+   @include adaptiveValue("padding-right", 150, 80, 0, 1920, 1440);
+
+   @media (max-width:$laptop) {
+      @include adaptiveValue("padding-left", 80, 20, 0, 1280, 1000);
+      @include adaptiveValue("padding-right", 80, 20, 0, 1280, 1000);
+      grid-template-columns: 1fr;
+   }
+
+   @media (max-width:$mobile) {
+      gap: 60px;
    }
 }
 

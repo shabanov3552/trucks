@@ -235,6 +235,7 @@
    // .about-brand__history
 
    &__history {
+      overflow: hidden;
       position: relative;
    }
 
@@ -370,6 +371,7 @@
    // .about-brand__slide-image-ibg
 
    &__slide-image-ibg {
+      display: none;
       width: 570px;
       height: 382px;
 
@@ -378,6 +380,11 @@
          width: 375px;
       }
    }
+}
+
+.about-brand-history-wrapper {
+   background-color: #3A3A3A;
+   margin-bottom: 30px;
 }
 
 .about-brand-years {

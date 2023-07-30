@@ -111,15 +111,15 @@
             display: none;
          }
 
-         &::before {
-            content: '';
-            position: absolute;
-            top: -25px;
-            right: 57px;
-            width: 35px;
-            height: 25px;
-            background: url(../img/home-page/message.svg) center /contain no-repeat;
-         }
+         // &::before {
+         //    content: '';
+         //    position: absolute;
+         //    top: -25px;
+         //    right: 57px;
+         //    width: 35px;
+         //    height: 25px;
+         //    background: url(../img/home-page/message.svg) center /contain no-repeat;
+         // }
       }
 
       &._active {
@@ -247,6 +247,7 @@
       // .home-page__fb-message_fourth
 
       &_fourth {
+         display: none !important;
          right: 310px;
          top: 255px;
          width: 243px;
@@ -1536,6 +1537,15 @@
             @media (max-width:$mobileSmall) {
                top: calc(100% + 15px);
             }
+         }
+
+         .widget__all-reviews {
+            margin-bottom: 10px !important;
+            color: #fff;
+         }
+
+         .widget__footer {
+            display: none !important;
          }
       }
    }

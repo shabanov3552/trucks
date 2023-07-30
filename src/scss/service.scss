@@ -115,6 +115,8 @@
    // .service__work
 
    &__work {
+      display: flex;
+      flex-direction: column;
       font-size: 40px;
       text-align: center;
       line-height: 45px;
@@ -135,6 +137,13 @@
 
    &__work-name {
       position: relative;
+      max-width: 390px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (max-width:$mobile) {
+         max-width: 300px;
+      }
 
       @media (max-width:$mobileMiddle) {
          margin-top: rem(30);
@@ -150,7 +159,11 @@
             top: -45px;
             left: 0;
             right: 0;
-            background: url(../img/service/work-plashka.png) center no-repeat;
+            background: url(../img/service/work-plashka.png) center / contain no-repeat;
+
+            @media (max-width:$mobile) {
+               top: -35px;
+            }
          }
       }
    }

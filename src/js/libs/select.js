@@ -451,7 +451,7 @@ class SelectConstructor {
 
 		var evt = document.createEvent("HTMLEvents");
 		evt.initEvent("change", false, true);
-		originalSelect.dispatchEvent(evt);
+		// originalSelect.dispatchEvent(evt);
 
 		// Вызов коллбэк функции
 		this.selectCallback(selectItem, originalSelect);

@@ -1,4 +1,5 @@
 //====================================================================================================
+
 .footer {
    background: #F9F9F9;
    padding-top: rem(73);
@@ -224,3 +225,38 @@
 }
 
 //====================================================================================================
+
+.сonsent {
+   max-width: 1800px;
+   margin: 0 auto;
+   padding-bottom: 50px;
+   @include adaptiveValue("padding-left", 100, 15);
+   @include adaptiveValue("padding-right", 100, 15);
+
+   @media (max-width:$tablet) {
+      display: grid;
+      grid-template-columns: minmax(168px, 1fr) 1fr;
+      column-gap: 85px;
+   }
+
+   @media (max-width:$mobile) {
+      column-gap: 20px;
+   }
+
+   @media (max-width:$mobileSmall) {
+      display: flex;
+      flex-direction: column;
+   }
+
+
+   p,
+   li {
+      margin-top: 10px;
+   }
+
+   h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 20px;
+   }
+}

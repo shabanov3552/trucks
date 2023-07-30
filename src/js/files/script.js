@@ -145,12 +145,12 @@ export function startAnim() {
 
    // пятое появление карточки
    setTimeout(() => {
-      messageThird.classList.remove('_active');
       messageFourth.classList.add('_active');
    }, 11500);
 
    // скрытие пятой карточки
    setTimeout(() => {
+      messageThird.classList.remove('_active');
       messageFourth.classList.remove('_active');
       video.currentTime = 0;
    }, 12900);
@@ -202,7 +202,7 @@ class YouTubeVideoPreview {
          html = `
          <div class="video__image-ibg"><img src="${this.imgSrc}" alt=""></div>
          <div class="video__play-btn">
-            <img src="img/play-btn.png" alt="">
+            <img src="/local/templates/main/img/play-btn.png" alt="">
          </div>`;
       }
       this.element.innerHTML = html;

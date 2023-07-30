@@ -72,31 +72,31 @@ body {
 
 	// Сайт загружен
 	.loaded & {
-		.preloader {
-			opacity: 0;
-			visibility: hidden;
-		}
+		// .preloader {
+		// 	opacity: 0;
+		// 	visibility: hidden;
+		// }
 	}
 }
 
-.preloader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 10000;
-	background-color: #fff;
-	transition: all 0.3s ease 0s;
+// .preloader {
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100vw;
+// 	height: 100vh;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	z-index: 100000;
+// 	background-color: #fff;
+// 	transition: all 0.3s ease 0s;
 
-	&.hide {
-		opacity: 0;
-		visibility: hidden;
-	}
-}
+// 	&.hide {
+// 		opacity: 0;
+// 		visibility: hidden;
+// 	}
+// }
 
 // Оболочка wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
@@ -122,12 +122,6 @@ body {
 
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
 
-/*
-(i) Стили будут применяться ко 
-всем классам содержащим *__container
-Например header__container, main__container и т.д.
-Снипет (HTML): cnt
-*/
 // @if ($responsiveType==1) {
 
 // 	// Отзывчивая
