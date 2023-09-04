@@ -178,6 +178,25 @@
 		color: #CF1235;
 		margin-top: rem(10);
 	}
+
+	// .form__message
+
+	&__message {
+		font-size: 18px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		margin-top: rem(35);
+
+		.success & {
+			color: #6EE79E;
+		}
+
+		.error & {
+			color: #CF1235;
+		}
+	}
+
 }
 
 //</FORM>

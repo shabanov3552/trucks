@@ -3371,7 +3371,10 @@
             }
             renderPreview() {
                 let html;
-                if (this.element.classList.contains("broadcast")) html = `\n         <div class="broadcast__text">\n            <p>Трансляция со склада</p>\n         </div>\n         <div class="broadcast__video">\n            <img src="${this.imgSrc}" alt="">\n         </div>`; else html = `\n         <div class="video__image-ibg"><img src="${this.imgSrc}" alt=""></div>\n         <div class="video__play-btn">\n            <img src="/local/templates/main/img/play-btn.png" alt="">\n         </div>`;
+                if (this.element.classList.contains("broadcast")) html = `\n         <div class="broadcast__text">\n            <p>Трансляция со склада</p>\n         </div>\n         <div class="broadcast__video">\n            <img src="${this.imgSrc}" alt="">\n         </div>`; else {
+                    let icon = this.element.closest(".port2") ? "/local/templates/main/img/play-btn-port2.png" : "/local/templates/main/img/play-btn.png";
+                    html = `\n         <div class="video__image-ibg"><img src="${this.imgSrc}" alt=""></div>\n         <div class="video__play-btn">\n            <img src="${icon}" alt="">\n         </div>`;
+                }
                 this.element.innerHTML = html;
             }
         }

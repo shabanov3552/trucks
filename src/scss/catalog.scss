@@ -83,7 +83,7 @@
       border-radius: 16px;
       padding: rem(10);
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(142px, 1fr));
       gap: 6px;
 
       @media (max-width:$laptop) and (min-width:$tablet) {
@@ -157,8 +157,17 @@
       min-height: 56px;
       transition: all 0.3s ease 0s;
 
+      .port2 & {
+         background: #36C3FC;
+         box-shadow: 0px 0px 0px 6px #FFFFFF, 0px 0px 0px 7px #36C3FC;
+      }
+
       &:hover {
          background: #a80e2b;
+
+         .port2 & {
+            background: #2890b9;
+         }
       }
    }
 

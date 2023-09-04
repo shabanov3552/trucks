@@ -251,6 +251,26 @@ h6 {
   margin-top: 0.625rem;
 }
 
+.form__message {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  margin-top: 2.1875rem;
+}
+
+.success .form__message {
+  color: #6EE79E;
+}
+
+.error .form__message {
+  color: #CF1235;
+}
+
 input[type=text],
 input[type=email],
 input[type=tel],
@@ -945,14 +965,21 @@ body::after {
   color: #CF1235;
 }
 
+.port2 .service__services-list li:before,
+.port2 .series__adv-list li:before {
+  color: #36C3FC;
+}
+
 .about-brand__video,
 .about__video,
+.about__image-ibg,
 .series__video,
 .option-detail__video,
 .truck-detail__video,
 .home-page__fb-slide,
 .home-page__fb-video,
-.video-block {
+.video-block,
+.home-page__image-ibg {
   position: relative;
   overflow: hidden;
   height: 0;
@@ -961,36 +988,44 @@ body::after {
 
 .about-brand__video video,
 .about__video video,
+.about__image-ibg video,
 .series__video video,
 .option-detail__video video,
 .truck-detail__video video,
 .home-page__fb-slide video,
 .home-page__fb-video video,
 .video-block video,
+.home-page__image-ibg video,
 .about-brand__video iframe,
 .about__video iframe,
+.about__image-ibg iframe,
 .series__video iframe,
 .option-detail__video iframe,
 .truck-detail__video iframe,
 .home-page__fb-slide iframe,
 .home-page__fb-video iframe,
 .video-block iframe,
+.home-page__image-ibg iframe,
 .about-brand__video object,
 .about__video object,
+.about__image-ibg object,
 .series__video object,
 .option-detail__video object,
 .truck-detail__video object,
 .home-page__fb-slide object,
 .home-page__fb-video object,
 .video-block object,
+.home-page__image-ibg object,
 .about-brand__video embed,
 .about__video embed,
+.about__image-ibg embed,
 .series__video embed,
 .option-detail__video embed,
 .truck-detail__video embed,
 .home-page__fb-slide embed,
 .home-page__fb-video embed,
-.video-block embed {
+.video-block embed,
+.home-page__image-ibg embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -1003,23 +1038,29 @@ body::after {
   display: none;
 }
 
-.video-block {
+.video-block,
+.home-page__image-ibg {
   border-radius: 20px;
   width: 100%;
 }
 
-.video-block video {
+.video-block video,
+.video-block img,
+.home-page__image-ibg video,
+.home-page__image-ibg img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.video-block__logo {
+.video-block__logo,
+.home-page__image-ibg__logo {
   position: absolute;
   top: 45px;
   left: 50px;
 }
 
-.video-block__logo img {
+.video-block__logo img,
+.home-page__image-ibg__logo img {
   width: 100%;
 }
 
@@ -1094,6 +1135,10 @@ body::after {
   grid-row: 2/3;
 }
 
+.port2 .addres a {
+  color: #36C3FC;
+}
+
 .addres a:hover {
   text-decoration: underline;
 }
@@ -1112,6 +1157,10 @@ body::after {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.port2 .broadcast {
+  display: none;
 }
 
 .broadcast._active {
@@ -1201,6 +1250,10 @@ body::after {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .truck-cards__slider .product-card__name {
@@ -1216,6 +1269,12 @@ body::after {
   font-style: italic;
   margin-bottom: 0.4375rem;
   text-transform: uppercase;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.product-card__series-brand {
+  display: block;
 }
 
 .product-card__series-num {
@@ -1282,6 +1341,10 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.port2 .product-card__more {
+  color: #36C3FC;
 }
 
 .product-card__more:hover {
@@ -1408,6 +1471,10 @@ body::after {
   color: #C00E2E;
 }
 
+.port2 .document__name {
+  color: #36C3FC;
+}
+
 .document__name::after {
   content: "";
   position: absolute;
@@ -1507,6 +1574,10 @@ body::after {
 
 p a {
   color: #CF1235;
+}
+
+.port2 p a {
+  color: #36C3FC;
 }
 
 p a:hover {
@@ -1633,6 +1704,28 @@ p a:hover {
   grid-template-columns: 288px 1fr auto;
 }
 
+.header__logo svg {
+  width: 255px;
+  height: 71px;
+}
+
+._header-scroll .header__logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.white .header__logo svg use {
+  fill: #fff;
+}
+
+._header-scroll .header__logo svg use {
+  fill: #fff;
+}
+
+.port2 .header__logo {
+  padding-left: 1.875rem;
+}
+
 .header__logo img {
   width: 100%;
 }
@@ -1694,6 +1787,10 @@ p a:hover {
   line-height: 24px;
   cursor: pointer;
   color: #CF1235;
+}
+
+.port2 .header__callback {
+  color: #36C3FC;
 }
 
 .white .header__callback,
@@ -1768,6 +1865,10 @@ p a:hover {
   height: 17.3px;
   display: block;
   background: url(../img/icons/star.svg) center center/contain no-repeat;
+}
+
+.port2 .menu__link.star::before {
+  background: url(../img/icons/star-blue.svg) center center/contain no-repeat;
 }
 
 .dropdown-catalog {
@@ -1897,6 +1998,10 @@ p a:hover {
 
 .footer__addres .addres__svg use {
   fill: #EF9CAB;
+}
+
+.port2 .footer__addres .addres__svg use {
+  fill: #CACACA;
 }
 
 .footer__socials {
@@ -2072,6 +2177,16 @@ p a:hover {
      object-fit: cover;
 }
 
+.home-page__fb-video img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .home-page__fb-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2087,7 +2202,7 @@ p a:hover {
   z-index: 1;
   position: relative;
   padding-left: 7.5rem;
-  padding-bottom: 6.6875rem;
+  padding-bottom: 5.375rem;
   gap: 35px;
 }
 
@@ -2157,25 +2272,14 @@ p a:hover {
 .home-page__fb-brands {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 227px 350px;
-  grid-template-columns: 227px 350px;
-  -ms-grid-rows: 65px 43px;
-  grid-template-rows: 65px 43px;
-  -webkit-column-gap: 53px;
-     -moz-column-gap: 53px;
-          column-gap: 53px;
-  row-gap: 46px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
-.home-page__fb-brand:first-child {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1/3;
-  max-width: 478px;
-}
-
-.home-page__fb-brand img {
-  width: 100%;
+.home-page__fb-brand span {
+  color: #FFF;
+  font-weight: 800;
+  line-height: normal;
 }
 
 .home-page__second-block {
@@ -2232,7 +2336,8 @@ p a:hover {
   gap: 50px;
 }
 
-.home-page .video-block {
+.home-page .video-block,
+.home-page__image-ibg {
   padding-bottom: 0;
 }
 
@@ -2320,10 +2425,19 @@ p a:hover {
   padding-top: 6.5625rem;
 }
 
-.home-page__fb-slide video {
+.home-page__fb-slide video,
+.home-page__fb-slide img {
   -o-object-fit: cover;
      object-fit: cover;
   mix-blend-mode: color;
+}
+
+.home-page__fb-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .home-page__fb-slider-btns .swiper-button-prev,
@@ -2387,6 +2501,10 @@ p a:hover {
   background: #CF1235;
   padding-bottom: 5.9375rem;
   padding-top: 7.6875rem;
+}
+
+.port2 .home-page__ffb-item_main {
+  background: #000;
 }
 
 .home-page__ffb-title {
@@ -2593,8 +2711,16 @@ p a:hover {
   fill: #CF1235;
 }
 
+.port2 .home-page__svb-addres .addres__svg use {
+  fill: #000;
+}
+
 .home-page__rewiews {
   margin-bottom: 5rem;
+}
+
+.port2 .home-page__rewiews {
+  display: none;
 }
 
 .home-page__rew-title {
@@ -2755,8 +2881,7 @@ p a:hover {
   padding: 0.625rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(142px, 1fr));
   gap: 6px;
 }
 
@@ -2795,8 +2920,18 @@ p a:hover {
   transition: all 0.3s ease 0s;
 }
 
+.port2 .catalog__btn-submit {
+  background: #36C3FC;
+  -webkit-box-shadow: 0px 0px 0px 6px #FFFFFF, 0px 0px 0px 7px #36C3FC;
+          box-shadow: 0px 0px 0px 6px #FFFFFF, 0px 0px 0px 7px #36C3FC;
+}
+
 .catalog__btn-submit:hover {
   background: #a80e2b;
+}
+
+.port2 .catalog__btn-submit:hover {
+  background: #2890b9;
 }
 
 .catalog__btn-reset {
@@ -3871,6 +4006,10 @@ p a:hover {
   line-height: 29px;
 }
 
+.port2 .service__item a {
+  color: #36C3FC;
+}
+
 .service__item a:hover {
   text-decoration: underline;
 }
@@ -4057,7 +4196,8 @@ p a:hover {
   margin-bottom: 7.5rem;
 }
 
-.about__video {
+.about__video,
+.about__image-ibg {
   border-radius: 20px;
 }
 
@@ -4602,6 +4742,10 @@ p a:hover {
 
 .parts__text a {
   color: #CF1235;
+}
+
+.port2 .parts__text a {
+  color: #36C3FC;
 }
 
 .parts__text a:hover {
@@ -5713,7 +5857,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-right: 6.25rem;
   }
 
-  .home-page .video-block {
+  .home-page__fb-brand span {
+    font-size: 5.5rem;
+  }
+
+  .home-page .video-block,
+  .home-page__image-ibg {
     height: 39.375rem;
   }
 
@@ -6019,6 +6168,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-right: 0.9375rem;
   }
 
+  .home-page__fb-brand span {
+    font-size: 1.5rem;
+  }
+
   .truck-detail__main-price {
     font-size: 1.75rem;
   }
@@ -6166,21 +6319,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .home-page__fb-title {
     font-size: 24px;
-  }
-
-  .home-page__fb-brands {
-    -ms-grid-columns: 145px 255px;
-    grid-template-columns: 145px 255px;
-    -ms-grid-rows: 41px 27px;
-    grid-template-rows: 41px 27px;
-    -webkit-column-gap: 34px;
-       -moz-column-gap: 34px;
-            column-gap: 34px;
-    row-gap: 29px;
-  }
-
-  .home-page__fb-brand:first-child {
-    max-width: 307px;
   }
 
   .home-page__second-block {
@@ -6487,7 +6625,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 80.06125em) {
-  .video-block__logo {
+  .video-block__logo,
+  .home-page__image-ibg__logo {
     top: 20px;
     left: 15px;
     width: 100px;
@@ -6512,6 +6651,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -ms-grid-columns: 188px 1fr auto;
     grid-template-columns: 188px 1fr auto;
     padding-right: 2.1875rem;
+  }
+
+  .header__logo svg {
+    width: 168px;
+    height: 48px;
   }
 
   .header__phone {
@@ -6577,21 +6721,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .home-page__fb-title {
     font-size: 20px;
-  }
-
-  .home-page__fb-brands {
-    -ms-grid-columns: 117px 181px;
-    grid-template-columns: 117px 181px;
-    -ms-grid-rows: 33px 22px;
-    grid-template-rows: 33px 22px;
-    -webkit-column-gap: 27px;
-       -moz-column-gap: 27px;
-            column-gap: 27px;
-    row-gap: 24px;
-  }
-
-  .home-page__fb-brand:first-child {
-    max-width: 248px;
   }
 
   .home-page__sb-row-top {
@@ -7012,7 +7141,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 62.5em) {
-  .home-page .video-block {
+  .home-page .video-block,
+  .home-page__image-ibg {
     height: 16.0625rem;
   }
 
@@ -7098,6 +7228,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             align-items: center;
     -ms-grid-columns: 138px 1fr auto;
     grid-template-columns: 138px 1fr auto;
+  }
+
+  .port2 .header__container {
+    height: 59px;
+  }
+
+  .header__logo svg {
+    width: 123px;
+    height: 60px;
+  }
+
+  .header__logo svg use {
+    fill: #fff;
   }
 
   .header__menu {
@@ -7304,6 +7447,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-top: 3.6875rem;
   }
 
+  .port2 .home-page__fb-content {
+    padding: 2.5rem;
+    padding-top: 0.75rem;
+  }
+
   .home-page__fb-content {
     padding: 0.75rem 2.5rem 5.625rem;
     -webkit-box-pack: justify;
@@ -7386,21 +7534,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .home-page__fb-title br {
     display: none;
-  }
-
-  .home-page__fb-brands {
-    -ms-grid-columns: 76px 118px;
-    grid-template-columns: 76px 118px;
-    -ms-grid-rows: 22px 14px;
-    grid-template-rows: 22px 14px;
-    -webkit-column-gap: 18px;
-       -moz-column-gap: 18px;
-            column-gap: 18px;
-    row-gap: 15px;
-  }
-
-  .home-page__fb-brand:first-child {
-    max-width: 161px;
   }
 
   .home-page__second-block {
@@ -7951,7 +8084,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 61.99875em) and (max-width: 23.4375em) {
-  .home-page .video-block {
+  .home-page .video-block,
+  .home-page__image-ibg {
     height: 12.375rem;
   }
 
@@ -8060,6 +8194,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 26px;
+  }
+
+  .port2 .header__logo {
+    padding-left: 0.9375rem;
   }
 
   .header__phone {
@@ -8739,23 +8877,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     height: 245px;
   }
 
+  .port2 .home-page__fb-content {
+    padding: 1.875rem;
+    padding-top: 0.75rem;
+  }
+
   .home-page__fb-content {
     padding: 0.75rem 1.75rem 5rem;
-  }
-
-  .home-page__fb-brands {
-    -ms-grid-columns: 41px 63px;
-    grid-template-columns: 41px 63px;
-    -ms-grid-rows: 12px 8px;
-    grid-template-rows: 12px 8px;
-    -webkit-column-gap: 10px;
-       -moz-column-gap: 10px;
-            column-gap: 10px;
-    row-gap: 8px;
-  }
-
-  .home-page__fb-brand:first-child {
-    max-width: 86px;
   }
 
   .home-page__sb-container {
@@ -9168,6 +9296,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .page__title {
     line-height: 2rem;
+  }
+
+  .product-card__series {
+    font-size: 48px;
+    line-height: 52px;
   }
 
   .option-card__image-ibg {
@@ -9652,6 +9785,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     }
 }
 
+@supports (font-size: clamp( 1.5rem , 0.7rem  +  4vw , 5.5rem )) {
+    .home-page__fb-brand span {
+      font-size: clamp( 1.5rem , 0.7rem  +  4vw , 5.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.5rem , 0.7rem  +  4vw , 5.5rem )) {
+    .home-page__fb-brand span {
+      font-size: calc(1.5rem + 4 * (100vw - 20rem) / 100);
+    }
+}
+
 @supports (margin-bottom: clamp( 2.5rem , 1.5625rem  +  4.6875vw , 7.1875rem )) {
     .truck-detail__more {
       margin-bottom: clamp( 2.5rem , 1.5625rem  +  4.6875vw , 7.1875rem );
@@ -9739,13 +9884,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @media (min-width: 80em) and (max-width: 120em) {
 @supports (height: clamp( 21.875rem , -13.125rem  +  43.75vw , 39.375rem )) {
-    .home-page .video-block {
+    .home-page .video-block,
+    .home-page__image-ibg {
       height: clamp( 21.875rem , -13.125rem  +  43.75vw , 39.375rem );
     }
 }
 
 @supports not (height: clamp( 21.875rem , -13.125rem  +  43.75vw , 39.375rem )) {
-    .home-page .video-block {
+    .home-page .video-block,
+    .home-page__image-ibg {
       height: calc(21.875rem + 17.5 * (100vw - 80rem) / 40);
     }
 }
@@ -9825,13 +9972,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @media (min-width: 62.5em) and (max-width: 80em) {
 @supports (height: clamp( 16.0625rem , -4.6964285714rem  +  33.2142857143vw , 21.875rem )) {
-    .home-page .video-block {
+    .home-page .video-block,
+    .home-page__image-ibg {
       height: clamp( 16.0625rem , -4.6964285714rem  +  33.2142857143vw , 21.875rem );
     }
 }
 
 @supports not (height: clamp( 16.0625rem , -4.6964285714rem  +  33.2142857143vw , 21.875rem )) {
-    .home-page .video-block {
+    .home-page .video-block,
+    .home-page__image-ibg {
       height: calc(16.0625rem + 5.8125 * (100vw - 62.5rem) / 17.5);
     }
 }
@@ -9886,7 +10035,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 61.99875em) and (min-width: 62.5em) {
-  .home-page .video-block {
+  .home-page .video-block,
+  .home-page__image-ibg {
     height: 22.375rem;
   }
 
@@ -9937,13 +10087,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @media (max-width: 61.99875em) and (min-width: 23.4375em) and (max-width: 62.5em) {
 @supports (height: clamp( 12.375rem , 6.375rem  +  25.6vw , 22.375rem )) {
-    .home-page .video-block {
+    .home-page .video-block,
+    .home-page__image-ibg {
       height: clamp( 12.375rem , 6.375rem  +  25.6vw , 22.375rem );
     }
 }
 
 @supports not (height: clamp( 12.375rem , 6.375rem  +  25.6vw , 22.375rem )) {
-    .home-page .video-block {
+    .home-page .video-block,
+    .home-page__image-ibg {
       height: calc(12.375rem + 10 * (100vw - 23.4375rem) / 39.0625);
     }
 }

@@ -1,11 +1,13 @@
 // Заголовки, общие БЄМ блоки и проче...
 
-.video-block {
+.video-block,
+.home-page__image-ibg {
    border-radius: 20px;
    @extend %responsiveVideo;
    width: 100%;
 
-   video {
+   video,
+   img {
       object-fit: cover;
    }
 
@@ -80,6 +82,10 @@
       grid-column: 2/3;
       grid-row: 2/3;
 
+      .port2 & {
+         color: #36C3FC;
+      }
+
       &:hover {
          text-decoration: underline;
       }
@@ -94,6 +100,10 @@
    align-items: center;
    z-index: 10000;
    transition: all 0.3s ease 0s;
+
+   .port2 & {
+      display: none;
+   }
 
    &._active {
       bottom: 70px;
@@ -233,6 +243,7 @@
       display: flex;
       gap: 17px;
       align-items: flex-end;
+      flex-direction: column;
 
       .truck-cards__slider & {
          row-gap: 0;
@@ -255,6 +266,18 @@
       font-style: italic;
       margin-bottom: rem(7);
       text-transform: uppercase;
+      align-self: flex-start;
+
+      @media (max-width: em(375)) {
+         font-size: 48px;
+         line-height: 52px;
+      }
+   }
+
+   // .product-card__series-brand
+
+   &__series-brand {
+      display: block;
    }
 
    // .product-card__series-num
@@ -333,6 +356,10 @@
       color: #9B4F5D;
       display: inline-flex;
       align-items: center;
+
+      .port2 & {
+         color: #36C3FC;
+      }
 
       &:hover {
          text-decoration: underline;
@@ -461,6 +488,10 @@
       line-height: 28px;
       padding-bottom: rem(10);
       color: #C00E2E;
+
+      .port2 & {
+         color: #36C3FC;
+      }
 
       &::after {
          content: '';
@@ -624,6 +655,10 @@
 p {
    a {
       color: #CF1235;
+
+      .port2 & {
+         color: #36C3FC;
+      }
 
       &:hover {
          text-decoration: underline;

@@ -199,10 +199,11 @@ class YouTubeVideoPreview {
             <img src="${this.imgSrc}" alt="">
          </div>`
       } else {
+         let icon = this.element.closest('.port2') ? "/local/templates/main/img/play-btn-port2.png" : "/local/templates/main/img/play-btn.png";
          html = `
          <div class="video__image-ibg"><img src="${this.imgSrc}" alt=""></div>
          <div class="video__play-btn">
-            <img src="/local/templates/main/img/play-btn.png" alt="">
+            <img src="${icon}" alt="">
          </div>`;
       }
       this.element.innerHTML = html;

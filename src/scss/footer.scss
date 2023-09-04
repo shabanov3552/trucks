@@ -98,6 +98,10 @@
       .addres__svg {
          use {
             fill: #EF9CAB;
+
+            .port2 & {
+               fill: #CACACA;
+            }
          }
       }
    }

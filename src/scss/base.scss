@@ -80,6 +80,10 @@
 			top: 0;
 			font-size: 14px;
 			color: #CF1235;
+
+			.port2 & {
+				color: #36C3FC;
+			}
 		}
 	}
 }

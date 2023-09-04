@@ -1,0 +1,177 @@
+@@include('html/_header-port2.htm',{
+"title":"Каталог 3s",
+"modClass":"port2"
+})
+<main class="page catalog">
+   @@include('html/_breadcrumbs.htm',{})
+   <h1 class="page__title">Каталог техники</h1>
+   <div class="catalog__filters">
+      <form action="" class="catalog__filters-form">
+         <div class="catalog__chekboxes">
+            <div class="filter-check">
+               <label class="filter-check__label">
+                  <input class="filter-check__input" type="checkbox">
+                  <div class="filter-check__inner">
+                     <div class="filter-check__icons">
+                        <img src="img/catalog/icons/company-2-no-select.png" alt="" class="filter-check__icon-no-select">
+                        <img src="img/catalog/icons/company-2-select-port2.png" alt="" class="filter-check__icon-select">
+                     </div>
+                     <span class="filter-check__text">Sitrak</span>
+                  </div>
+               </label>
+            </div>
+            <div class="filter-check">
+               <label class="filter-check__label">
+                  <input class="filter-check__input" type="checkbox">
+                  <div class="filter-check__inner">
+                     <div class="filter-check__icons">
+                        <img src="img/catalog/icons/company-3-no-select.png" alt="" class="filter-check__icon-no-select">
+                        <img src="img/catalog/icons/company-3-select-port2.png" alt="" class="filter-check__icon-select">
+                     </div>
+                     <span class="filter-check__text">Dongfeng</span>
+                  </div>
+               </label>
+            </div>
+         </div>
+         <div class="catalog__chekboxes">
+            <div class="filter-check">
+               <label class="filter-check__label">
+                  <input class="filter-check__input" type="checkbox">
+                  <div class="filter-check__inner">
+                     <div class="filter-check__icons">
+                        <img src="img/catalog/icons/truck-1-no-select.png" alt="" class="filter-check__icon-no-select">
+                        <img src="img/catalog/icons/truck-1-select-port2.png" alt="" class="filter-check__icon-select">
+                     </div>
+                     <span class="filter-check__text">Самосвалы</span>
+                  </div>
+               </label>
+            </div>
+            <div class="filter-check">
+               <label class="filter-check__label">
+                  <input class="filter-check__input" type="checkbox">
+                  <div class="filter-check__inner">
+                     <div class="filter-check__icons">
+                        <img src="img/catalog/icons/truck-2-no-select.png" alt="" class="filter-check__icon-no-select">
+                        <img src="img/catalog/icons/truck-2-select-port2.png" alt="" class="filter-check__icon-select">
+                     </div>
+                     <span class="filter-check__text">Седельные тягачи</span>
+                  </div>
+               </label>
+            </div>
+            <div class="filter-check">
+               <label class="filter-check__label">
+                  <input class="filter-check__input" type="checkbox">
+                  <div class="filter-check__inner">
+                     <div class="filter-check__icons">
+                        <img src="img/catalog/icons/truck-3-no-select.png" alt="" class="filter-check__icon-no-select">
+                        <img src="img/catalog/icons/truck-3-select-port2.png" alt="" class="filter-check__icon-select">
+                     </div>
+                     <span class="filter-check__text">Спецтехника</span>
+                  </div>
+               </label>
+            </div>
+         </div>
+         <div class="catalog__col">
+            <div class="checkbox">
+               <label class="checkbox__label">
+                  <input class="checkbox__input" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Есть в наличии
+               </label>
+            </div>
+            <select>
+               <option value="0">Колесная формула</option>
+               <option value="1">Пункт №2</option>
+               <option value="2">Пункт №3</option>
+               <option value="3">Пункт №4</option>
+            </select>
+         </div>
+         <div class="catalog__buttons">
+            <button type="submit" class="catalog__btn-submit">Показать</button>
+            <button type="reset" class="catalog__btn-reset">Сбросить фильтры</button>
+         </div>
+      </form>
+   </div>
+   <div class="catalog__container">
+      <div class="catalog__cards">
+         @@include('html/_product-card.htm',{
+         "imageSrc":"img/catalog/truck-7.jpg",
+         "series":"x",
+         "seriesNum":"3000",
+         "truckType":"Автобетоносмеситель, 550 л.с",
+         "article":"SX42584W324C, 6х4",
+         "oldPrice":"10 900 000"
+         })
+
+         @@include('html/_product-card.htm',{
+         "imageSrc":"img/catalog/truck-1.jpg",
+         "series":"F",
+         "seriesNum":"3000",
+         "truckType":"Самосвал, 550 л.с",
+         "article":"SX42584W324C, 6х4",
+         "oldPrice":"10 900 000"
+         })
+
+         @@include('html/_product-card.htm',{
+         "imageSrc":"img/catalog/truck-2.jpg",
+         "series":"x",
+         "seriesNum":"6000",
+         "truckType":"Самосвал, 550 л.с",
+         "article":"SX42584W324C, 6х4",
+         "oldPrice":""
+         })
+
+         @@include('html/_product-card.htm',{
+         "imageSrc":"img/catalog/truck-3.jpg",
+         "series":"F",
+         "seriesNum":"3000",
+         "truckType":"Седельный тягач, 480 л.с",
+         "article":"SX42584W324C, 6х4",
+         "oldPrice":""
+         })
+
+         @@include('html/_product-card.htm',{
+         "imageSrc":"img/catalog/truck-4.jpg",
+         "series":"f",
+         "seriesNum":"3000",
+         "truckType":"Седельный тягач, 550 л.с",
+         "article":"SX42584W324C, 6х4",
+         "oldPrice":"10 900 000"
+         })
+
+         @@include('html/_product-card.htm',{
+         "imageSrc":"img/catalog/truck-5.jpg",
+         "series":"x",
+         "seriesNum":"6000",
+         "truckType":"Седельный тягач, 550 л.с",
+         "article":"SX42584W324C, 6х4",
+         "oldPrice":""
+         })
+
+         @@include('html/_product-card.htm',{
+         "imageSrc":"img/catalog/truck-2.jpg",
+         "series":"x",
+         "seriesNum":"6000",
+         "truckType":"Седельный тягач, 480 л.с",
+         "article":"SX42584W324C, 6х4",
+         "oldPrice":""
+         })
+      </div>
+      <div class="catalog__pagging">
+         @@include('html/_pagging.htm',{})
+      </div>
+      <div class="catalog__text">
+         <p>Откройте мир возможностей с грузовиками Shacman. Наш каталог предлагает широкий выбор надежных и производительных грузовиков, которые сочетают в себе качество, инновации и комфорт. Независимо от вашей задачи, у нас есть идеальное решение для ваших потребностей в перевозках. </p>
+         <h3>Подзаголовок</h3>
+         <p>Обратитесь к нашему каталогу сегодня и выберите грузовик, который поможет вам достичь успеха в бизнесе. Откройте мир возможностей с грузовиками Shacman. Наш каталог предлагает широкий выбор надежных и производительных грузовиков, которые сочетают в себе качество, инновации и комфорт. Независимо от вашей задачи, у нас есть идеальное решение для ваших потребностей в перевозках. </p>
+         <ul>
+            <li>Низкий уровень шума;</li>
+            <li>Экономичное потребление дизельного топлива;</li>
+            <li>Низкое энергопотребление;</li>
+            <li>Гарантия 18 месяцев.</li>
+         </ul>
+      </div>
+   </div>
+</main>
+@@include('html/_footer-port2.htm',{})
+@@include('html/_popup.htm',{})

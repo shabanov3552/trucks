@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Деталка товара 3s</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap&_v=20230904162332" rel="stylesheet">
+	<style>
+		.preloader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 100000;
+			background-color: #fff;
+			transition: all 0.3s ease 0s;
+
+		}
+
+		.preloader .hide {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loaded body .preloader {
+			opacity: 0;
+			visibility: hidden;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20230904162332">
+	<link rel="shortcut icon" href="favicon-port2.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="preloader" style="opacity: 0; visibility: hidden;"><img src="img/loader.gif" alt=""></div>
+	<script>
+		if (sessionStorage.getItem('preloader') === 'hide') {
+			document.querySelector('.preloader').style.cssText = 'opacity: 0; visibility: hidden;';
+		} else {
+			document.querySelector('.preloader').style.cssText = '';
+			sessionStorage.setItem('preloader', 'hide');
+		}
+	</script>
+	<div class="wrapper white port2">
+		<header class="header" data-scroll="100">
+			<div class="header__container">
+				<a href="" class="header__logo">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#logo3S"></use>
+					</svg>
+				</a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item menu__item_dropdown">
+								<a href="" class="menu__link">Каталог техники</a>
+							</li>
+							<li class="menu__item"><a href="" class="menu__link star">Дополнительное оборудование</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Сервис</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Запчасти</a></li>
+							<li class="menu__item"><a href="" class="menu__link">О компании</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+						</ul>
+					</nav>
+					<div data-da=".menu__item_dropdown, 991.98" class="dropdown-catalog" hidden>
+						<div class="dropdown-catalog__row">
+							<a href="" class="dropdown-catalog__link">
+								<img src="img/header/dropdown-catalog__link-img-1.svg" alt="">
+								<div class="dropdown-catalog__link-col">
+									<div class="dropdown-catalog__link-name">Shacman</div>
+									<div class="dropdown-catalog__models"><i>X</i>3000 <i>X</i>6000 <i>F</i>6000</div>
+								</div>
+							</a>
+							<a href="" class="dropdown-catalog__link">
+								<img src="img/header/dropdown-catalog__link-img-2.svg" alt="">
+								<div class="dropdown-catalog__link-col">
+									<div class="dropdown-catalog__link-name">Sitrak</div>
+								</div>
+							</a>
+							<a href="" class="dropdown-catalog__link">
+								<img src="img/header/dropdown-catalog__link-img-3.svg" alt="">
+								<div class="dropdown-catalog__link-col">
+									<div class="dropdown-catalog__link-name">Dongfeng</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="header__mobile">
+					<a href="tel:+73912699335" class="header__phone"><img src="img/icons/phone-white.svg" alt=""></a>
+				</div>
+				<div class="header__col" data-da=".menu__body, 991.98, first">
+					<a href="tel:+73912699335" class="header__phone">+7 391 269-9335</a>
+					<div class="header__callback" data-popup="#popup-2">Заказать звонок</div>
+				</div>
+			</div>
+		</header>
+		<main class="page truck-detail">
+			<a href="" class="broadcast" data-popup="#video" data-popup-youtube="ioxxFL_SDjc">
+				<div class="broadcast__text">
+					<p>Трансляция со склада</p>
+				</div>
+				<div class="broadcast__video">
+					<picture><source srcset="img/broadcast.webp" type="image/webp"><img src="img/broadcast.jpg" alt=""></picture>
+				</div>
+			</a>
+			<nav class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__li">
+						<a href="" class="breadcrumbs__link">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__li">
+						<a href="" class="breadcrumbs__link">
+							Крошка
+						</a>
+					</li>
+					<li class="breadcrumbs__li">
+						<a href="" class="breadcrumbs__link">
+							Крошка
+						</a>
+					</li>
+					<li class="breadcrumbs__li">
+						<span class="breadcrumbs__item">Последняя крошка</span>
+					</li>
+				</ul>
+			</nav>
+			<div class="truck-detail__image-ibg"><picture><source srcset="img/catalog/truck-detail/detail-bg.webp" type="image/webp"><img src="img/catalog/truck-detail/detail-bg.png" alt=""></picture></div>
+			<div class="truck-detail__first-block">
+				<div class="truck-detail__fb-top">
+					<div class="truck-detail__title">
+						<div class="truck-detail__brand">SHACMAN</div>
+						<div class="truck-detail__series">x<span class="truck-detail__series-num">3000</span></div>
+					</div>
+					<div class="truck-detail__article">SX42584W324C, 6х4</div>
+					<div class="truck-detail__type">Седельный тягач</div>
+				</div>
+				<div class="truck-detail__prew">
+					<div class="truck-detail__slider swiper">
+						<div class="truck-detail__wrapper swiper-wrapper" data-gallery>
+							<div class="truck-detail__slide swiper-slide" data-src="img/catalog/truck-detail/truck-photo-1.png"><picture><source srcset="img/catalog/truck-detail/truck-photo-1.webp" type="image/webp"><img src="img/catalog/truck-detail/truck-photo-1.png" alt=""></picture></div>
+							<div class="truck-detail__slide swiper-slide" data-src="img/catalog/truck-detail/truck-photo-2.png"><picture><source srcset="img/catalog/truck-detail/truck-photo-2.webp" type="image/webp"><img src="img/catalog/truck-detail/truck-photo-2.png" alt=""></picture></div>
+							<div class="truck-detail__slide swiper-slide" data-src="img/catalog/truck-detail/truck-photo-3.png"><picture><source srcset="img/catalog/truck-detail/truck-photo-3.webp" type="image/webp"><img src="img/catalog/truck-detail/truck-photo-3.png" alt=""></picture></div>
+						</div>
+					</div>
+					<div class="truck-detail__thumbs-slider swiper">
+						<div class="truck-detail__thumbs-wrapper swiper-wrapper">
+							<div class="truck-detail__thumbs-slide swiper-slide"><picture><source srcset="img/catalog/truck-detail/truck-photo-1.webp" type="image/webp"><img src="img/catalog/truck-detail/truck-photo-1.png" alt=""></picture></div>
+							<div class="truck-detail__thumbs-slide swiper-slide"><picture><source srcset="img/catalog/truck-detail/truck-photo-2.webp" type="image/webp"><img src="img/catalog/truck-detail/truck-photo-2.png" alt=""></picture></div>
+							<div class="truck-detail__thumbs-slide swiper-slide"><picture><source srcset="img/catalog/truck-detail/truck-photo-3.webp" type="image/webp"><img src="img/catalog/truck-detail/truck-photo-3.png" alt=""></picture></div>
+						</div>
+					</div>
+				</div>
+				<div class="truck-detail__fb-bottom">
+					<div class="truck-detail__price">
+						<div class="truck-detail__old-price">8 900 000</div>
+						<div class="truck-detail__main-price"><span>от</span> 7 900 000 ₽</div>
+					</div>
+					<div class="truck-detail__date">цена от 4.06.2023</div>
+					<div class="truck-detail__buttons">
+						<a href="" data-popup="#popup-4" class="truck-detail__btn btn-bg_white">Записаться на презентацию модели</a>
+						<a href="" data-popup="#popup-3" class="truck-detail__btn btn-bg_white">Получить консультацию</a>
+						<button type="button" id="share-button" class="truck-detail__btn-share">
+							<img src="img/icons/to_share.svg" alt="Поделиться">
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="truck-detail__second-block">
+				<div class="truck-detail__description">
+					<p>Shacman X3000 — новая серия грузовых авто, выпущенная на рынок. Добавлено много улучшений и обновлений для повышения производительности, эффективности и комфорта.</p>
+					<br>
+					<br>
+					<a href="" download="" class="document">
+						<img src="img/icons/pdf.svg" alt="">
+						<span class="document__name">Предпродажная подготовка</span>
+						<span class="document__text">Мы делаем по 60 параметрам</span>
+					</a>
+					<br>
+					<br>
+					<p>Специальное ПО бортового компьютера, двойной компрессор сброса нагрузки воздушного цилиндра, обновленное управление электроникой </p>
+					<br>
+					<p>Новый европейский дизайн в стиле каюты, полная оптимизация CFD, коэффициент аэродинамического сопротивления снизился до 0,53 </p>
+					<br>
+					<p>Интеллектуальная сетевая архитектура электроники от Volvo</p>
+					<br>
+					<p>Большой воздухозаборник: новая, запатентованная система охлаждения двигателя с пониженным давлением </p>
+					<br>
+					<p>Однослойная конструкция рамы от MAN: легкий и прочный сплав, созданный под сверхвысоким давлением</p>
+					<br>
+					<p>Автомобили оснащаются двигателями Вэйчай (Weichai) и Каминс (Cummins) высокой мощности: Вэйчай 12л. 375 л\с и 400 л\с, Каминс 385 л\с и 420 л\с, 12-ступенчатой КПП Fast с алюминиевым корпусом (без повышающей передачи) и 13-тонным мостом Ханьдэ (Hande) MAN (с передаточным отношением 2.714 и 3.083) с одноступенчатым редуктором, для осуществления высокоскоростных грузоперевозок. </p>
+					<br>
+					<p>Разработаны новые воздуховпускные трубки, площадь впускаемого воздуха увеличена на 26.5%. Сопротивление впускаемого воздуха снизилось на 7%, значительно повысился КПД впускаемого воздуха, что еще более повысило эффективность сгорания дизельного топлива. </p>
+				</div>
+				<div class="truck-detail__video" data-popup="#video" data-popup-youtube="ioxxFL_SDjc"></div>
+			</div>
+			<div class="truck-detail__gallery" data-gallery>
+				<div class="truck-detail__gellery-item" data-src="img/catalog/truck-detail/gallery-1.png"><picture><source srcset="img/catalog/truck-detail/gallery-1.webp" type="image/webp"><img src="img/catalog/truck-detail/gallery-1.png" alt=""></picture></div>
+				<div class="truck-detail__gellery-item" data-src="img/catalog/truck-detail/gallery-2.png"><picture><source srcset="img/catalog/truck-detail/gallery-2.webp" type="image/webp"><img src="img/catalog/truck-detail/gallery-2.png" alt=""></picture></div>
+				<div class="truck-detail__gellery-item" data-src="img/catalog/truck-detail/gallery-3.png"><picture><source srcset="img/catalog/truck-detail/gallery-3.webp" type="image/webp"><img src="img/catalog/truck-detail/gallery-3.png" alt=""></picture></div>
+				<div class="truck-detail__gellery-item" data-src="img/catalog/truck-detail/gallery-4.png"><picture><source srcset="img/catalog/truck-detail/gallery-4.webp" type="image/webp"><img src="img/catalog/truck-detail/gallery-4.png" alt=""></picture></div>
+				<div class="truck-detail__gellery-item" data-src="img/catalog/truck-detail/gallery-5.png"><picture><source srcset="img/catalog/truck-detail/gallery-5.webp" type="image/webp"><img src="img/catalog/truck-detail/gallery-5.png" alt=""></picture></div>
+				<div class="truck-detail__gellery-item" data-src="img/catalog/truck-detail/gallery-6.png"><picture><source srcset="img/catalog/truck-detail/gallery-6.webp" type="image/webp"><img src="img/catalog/truck-detail/gallery-6.png" alt=""></picture></div>
+			</div>
+			<div class="truck-detail__specifications">
+				<div data-tabs class="specifications">
+					<h2 class="specifications__title">Характеристики</h2>
+					<nav data-tabs-titles class="specifications__navigation">
+						<button type="button" class="specifications__tab-name _tab-active"><img src="img/icons/spec-icon-2.1.svg" alt=""><span>Основные</span></button>
+						<button type="button" class="specifications__tab-name"><img src="img/icons/spec-icon-2.2.svg" alt=""><span>Весовые</span></button>
+						<button type="button" class="specifications__tab-name"><img src="img/icons/spec-icon-2.3.svg" alt=""><span>Распределение полной массы по осям</span></button>
+						<button type="button" class="specifications__tab-name"><img src="img/icons/spec-icon-2.4.svg" alt=""><span>Трансмиссия</span></button>
+					</nav>
+					<div data-tabs-body class="specifications__content">
+						<div class="specifications__body">
+							<div class="specifications__row">
+								<div class="specifications__name">Колесная формула</div>
+								<div class="specifications__value">4×2, 6×4 </div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Кабина</div>
+								<div class="specifications__value">Удлиненная высокая крыша </div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Двигатель</div>
+								<div class="specifications__value">Weichai WP10 WP12 WP13; Cummins ISM Series</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Экологический стандарт</div>
+								<div class="specifications__value">Евро 2, 3, 4, 5 </div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">КПП</div>
+								<div class="specifications__value">FAST F10, F12, F16 Трансмиссия </div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Сцепление</div>
+								<div class="specifications__value">ETONF430 </div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Подвеска </div>
+								<div class="specifications__value">Многослойная пружинная </div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Объем бака</div>
+								<div class="specifications__value">400/600 — алюминиевый </div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Шины</div>
+								<div class="specifications__value">12.00R20, 11.00R20, 12.00R22.5, 11.00R22.5</div>
+							</div>
+						</div>
+						<div class="specifications__body">
+							Содержимое второго таба
+						</div>
+						<div class="specifications__body">
+							Содержимое третьего таба
+						</div>
+						<div class="specifications__body">
+							Содержимое четвертого таба
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="truck-detail__photo-slider swiper">
+				<div class="truck-detail__photo-wrapper swiper-wrapper" data-gallery>
+					<div class="truck-detail__photo-slide-ibg swiper-slide" data-src="img/catalog/truck-detail/photo-1.jpg">
+						<picture><source srcset="img/catalog/truck-detail/photo-1.webp" type="image/webp"><img src="img/catalog/truck-detail/photo-1.jpg" alt=""></picture>
+					</div>
+					<div class="truck-detail__photo-slide-ibg swiper-slide" data-src="img/catalog/truck-detail/photo-2.jpg">
+						<picture><source srcset="img/catalog/truck-detail/photo-2.webp" type="image/webp"><img src="img/catalog/truck-detail/photo-2.jpg" alt=""></picture>
+					</div>
+					<div class="truck-detail__photo-slide-ibg swiper-slide" data-src="img/catalog/truck-detail/photo-1.jpg">
+						<picture><source srcset="img/catalog/truck-detail/photo-1.webp" type="image/webp"><img src="img/catalog/truck-detail/photo-1.jpg" alt=""></picture>
+					</div>
+					<div class="truck-detail__photo-slide-ibg swiper-slide" data-src="img/catalog/truck-detail/photo-2.jpg">
+						<picture><source srcset="img/catalog/truck-detail/photo-2.webp" type="image/webp"><img src="img/catalog/truck-detail/photo-2.jpg" alt=""></picture>
+					</div>
+				</div>
+				<div class="truck-detail__photo-slider-btns">
+					<button type="button" class="swiper-button-prev">
+						<img src="img/icons/video-slider-arrow-left.svg" alt="">
+					</button>
+					<button type="button" class="swiper-button-next">
+						<img src="img/icons/video-slider-arrow-right.svg" alt="">
+					</button>
+				</div>
+			</div>
+			<div class="truck-detail__more">
+				<div class="truck-detail__m-ibg"><picture><source srcset="img/catalog/truck-detail/more-gb.webp" type="image/webp"><img src="img/catalog/truck-detail/more-gb.jpg" alt=""></picture></div>
+				<div class="truck-detail__m-series">x<span class="truck-detail__m-series-num">3000</span></div>
+				<a href="" class="truck-detail__m-link">подробнее о серии <img src="img/icons/icon-arrow-more.svg" alt=""></a>
+			</div>
+			<div class="truck-detail__footer">
+				<h3 class="truck-detail__subtitle">Вас также может заинтересовать</h3>
+				<div class="catalog">
+					<div class="catalog__cards">
+						<div class="product-card">
+							<div class="product-card__image-ibg product-card__image-ibg_contain"><picture><source srcset="img/catalog/truck-7.webp" type="image/webp"><img src="img/catalog/truck-7.jpg" alt=""></picture></div>
+							<div class="product-card__center">
+								<a href="" class="product-card__name">
+									<div class="product-card__series"><span class="product-card__series-brand">Shacman</span> x<span class="product-card__series-num">3000</span></div>
+									<div class="product-card__truck-type">Автобетоносмеситель, 550 л.с</div>
+								</a>
+								<div class="product-card__article">SX42584W324C, 6х4</div>
+							</div>
+							<div class="product-card__bottom">
+								<div class="product-card__price">
+									<div class="product-card__old-price">10 900 000</div>
+									<div class="product-card__main-price">7 900 000 ₽</div>
+								</div>
+								<a href="" class="product-card__more">Подробнее <img src="img/icons/card-arrow-more-port2.svg" alt=""></a>
+								<a href="" data-popup="#popup-3" class="product-card__btn btn-bg_white">Получить консультацию</a>
+							</div>
+						</div>
+
+						<div class="product-card">
+							<div class="product-card__image-ibg product-card__image-ibg_contain"><picture><source srcset="img/catalog/truck-1.webp" type="image/webp"><img src="img/catalog/truck-1.jpg" alt=""></picture></div>
+							<div class="product-card__center">
+								<a href="" class="product-card__name">
+									<div class="product-card__series"><span class="product-card__series-brand">Shacman</span> F<span class="product-card__series-num">3000</span></div>
+									<div class="product-card__truck-type">Самосвал, 550 л.с</div>
+								</a>
+								<div class="product-card__article">SX42584W324C, 6х4</div>
+							</div>
+							<div class="product-card__bottom">
+								<div class="product-card__price">
+									<div class="product-card__old-price">10 900 000</div>
+									<div class="product-card__main-price">7 900 000 ₽</div>
+								</div>
+								<a href="" class="product-card__more">Подробнее <img src="img/icons/card-arrow-more-port2.svg" alt=""></a>
+								<a href="" data-popup="#popup-3" class="product-card__btn btn-bg_white">Получить консультацию</a>
+							</div>
+						</div>
+
+						<div class="product-card">
+							<div class="product-card__image-ibg product-card__image-ibg_contain"><picture><source srcset="img/catalog/truck-2.webp" type="image/webp"><img src="img/catalog/truck-2.jpg" alt=""></picture></div>
+							<div class="product-card__center">
+								<a href="" class="product-card__name">
+									<div class="product-card__series"><span class="product-card__series-brand">Shacman</span> x<span class="product-card__series-num">6000</span></div>
+									<div class="product-card__truck-type">Самосвал, 550 л.с</div>
+								</a>
+								<div class="product-card__article">SX42584W324C, 6х4</div>
+							</div>
+							<div class="product-card__bottom">
+								<div class="product-card__price">
+									<div class="product-card__old-price"></div>
+									<div class="product-card__main-price">7 900 000 ₽</div>
+								</div>
+								<a href="" class="product-card__more">Подробнее <img src="img/icons/card-arrow-more-port2.svg" alt=""></a>
+								<a href="" data-popup="#popup-3" class="product-card__btn btn-bg_white">Получить консультацию</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__menu menu-footer">
+					<ul class="menu-footer__list">
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">Каталог техники</a></li>
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">Сервис</a></li>
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">Запчасти</a></li>
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">Дополнительное оборудование</a></li>
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">О компании</a></li>
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">О Shacman</a></li>
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">Руководства</a></li>
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">Доставка и оплата</a></li>
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">Гарантии</a></li>
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">Лизинг</a></li>
+						<li class="menu-footer__item"><a href="" class="menu-footer__link">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer__center">
+					<div class="footer__col">
+						<a href="tel:+73919868091" class="footer__link"><img src="img/icons/footer__phone_port2.svg" alt=""><span>+7 391 986-8091</span></a>
+						<a href="mailto:3580832@mail.ru" class="footer__link"><img src="img/icons/footer__mail_port2.svg" alt=""><span>3580832@mail.ru</span></a>
+					</div>
+					<div class="footer__addres">
+						<div class="addres">
+							<svg class="addres__svg">
+								<use xlink:href="img/icons/icons.svg#icon-map"></use>
+							</svg>
+							<span>Красноярск, Кардачинская, 28 – офис компании</span>
+							<a href="">Схема проезда</a>
+						</div>
+					</div>
+					<div class="footer__socials">
+						<a href="" class="inst" target="_blank">inst:@portvostok</a>
+						<a href="" class="vkontakte" target="_blank">
+							<img src="img/icons/logo__vk.svg" alt="">
+							<span>мы Вконтакте</span>
+						</a>
+					</div>
+				</div>
+				<div class="footer__bottom copyright">
+					<div class="copyright__wrapper">
+						<div class="copyright__body">
+							<div class="copyright__item">2023 © «Порт Восток»</div>
+							<a href="/policy" class="copyright__item">Политика конфиденциальности</a>
+							<a href="/consent" class="copyright__item">Согласие на обработку персональных данных</a>
+							<a href="https://websalt.ru" target="_blank" class="copyright__item">Создание сайта
+								<svg class="copyright__svg">
+									<use xlink:href="img/icons/icons.svg#logo_salt"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230904162332" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230904162332"></script>
+</body>
+
+</html>
+<div id="video" aria-hidden="true" class="popup video-popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__header">
+				<button data-close type="button" class="popup__close">
+					<img src="img/icons/close-modal.svg" alt="">
+				</button>
+			</div>
+			<div data-popup-youtube-place class="popup__video">
+
+			</div>
+		</div>
+	</div>
+</div>
+<div id="share-popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__header">
+				<div class="popup__title">Поделиться</div>
+				<button data-close type="button" class="popup__close">
+					<img src="img/icons/close-modal.svg" alt="">
+				</button>
+			</div>
+			<div class="popup__main">
+				<div class="share">
+					<div class="share__social">
+						<!-- uSocial -->
+						<script async src="https://usocial.pro/usocial/usocial.js?uid=21cd4b58eaf61697&v=6.1.5&_v=20230904162332" data-script="usocial" charset="utf-8"></script>
+						<div class="uSocial-Share" data-pid="b7450283dbc9e941ee22b283d6036804" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter0,nomobile,mobile_position_right" data-social="vk,ok,telegram,wa,vi"></div>
+						<!-- /uSocial -->
+					</div>
+					<div class="share__copy-url">
+						<div class="form__line">
+							<label for="copyUrl" class="form__label">Ссылка на товар</label>
+							<input autocomplete="off" id="copyUrl" type="text" class="share__input form__input">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+						</div>
+						<button type="button" class="share__button">Скопировать ссылку</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="popup-1" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__header">
+				<div class="popup__title">Оставить заявку</div>
+				<button data-close type="button" class="popup__close">
+					<img src="img/icons/close-modal.svg" alt="">
+				</button>
+			</div>
+			<div class="popup__main">
+				<div class="popup__text">Заполните форму обратной связи и наши специалисты свяжутся с вами для уточнения деталей</div>
+				<div class="popup__form">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
+						<div class="form__line">
+							<label for="p-callback-1.1" class="form__label">Ваше имя *</label>
+							<input required id="p-callback-1.1" type="text" class="form__input">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+						</div>
+						<div class="form__line">
+							<label for="p-callback-1.2" class="form__label">Контактный номер *</label>
+							<input required id="p-callback-1.2" type="tel" class="form__input js_phone">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+						</div>
+						<div class="form__line">
+							<label for="p-callback-1.3" class="form__label">Комментарий</label>
+							<textarea data-autoheight id="p-callback-1.3" class="form__input"></textarea>
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+						</div>
+						<div class="form__footer">
+							<button type="submit" class="form__button">Отправить</button>
+							<div class="form__check checkbox">
+								<label class="checkbox__label">
+									<input class="checkbox__input" type="checkbox" checked>
+									<span class="checkbox__check"></span>
+									<span class="checkbox__text">Отправляя данные, я даю свое <a href="">согласие на обработку перс. данных</a></span>
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="popup-2" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__header">
+				<div class="popup__title">Заказ звонка</div>
+				<button data-close type="button" class="popup__close">
+					<img src="img/icons/close-modal.svg" alt="">
+				</button>
+			</div>
+			<div class="popup__main">
+				<div class="popup__text">Заполните форму обратной связи и наши специалисты свяжутся с вами для уточнения деталей</div>
+				<div class="popup__form">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
+						<div class="form__line">
+							<label for="p-callback-2.1" class="form__label">Ваше имя</label>
+							<input required id="p-callback-2.1" type="text" class="form__input">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+						</div>
+						<div class="form__line">
+							<label for="p-callback-2.2" class="form__label">Контактный номер</label>
+							<input required id="p-callback-2.2" type="tel" class="form__input js_phone">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+						</div>
+						<div class="form__footer">
+							<button type="submit" class="form__button">Отправить</button>
+							<div class="form__check checkbox">
+								<label class="checkbox__label">
+									<input class="checkbox__input" type="checkbox" checked>
+									<span class="checkbox__check"></span>
+									<span class="checkbox__text">Отправляя данные, я даю свое <a href="">согласие на обработку перс. данных</a></span>
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="popup-3" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__header">
+				<div class="popup__title">Получить консультацию</div>
+				<button data-close type="button" class="popup__close">
+					<img src="img/icons/close-modal.svg" alt="">
+				</button>
+			</div>
+			<div class="popup__main">
+				<div class="popup__text">Оставьте контактные данные и наши специалисты свяжутся с вами для уточнения деталей</div>
+				<div class="popup__form">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
+						<div class="form__line">
+							<label for="p-callback-2.1" class="form__label">Ваше имя</label>
+							<input required id="p-callback-2.1" type="text" class="form__input">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+						</div>
+						<div class="form__line">
+							<label for="p-callback-2.2" class="form__label">Контактный номер</label>
+							<input required id="p-callback-2.2" type="tel" class="form__input js_phone">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+						</div>
+						<div class="form__footer">
+							<button type="submit" class="form__button">Отправить</button>
+							<div class="form__check checkbox">
+								<label class="checkbox__label">
+									<input class="checkbox__input" type="checkbox" checked>
+									<span class="checkbox__check"></span>
+									<span class="checkbox__text">Отправляя данные, я даю свое <a href="">согласие на обработку перс. данных</a></span>
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="popup-4" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__header">
+				<div class="popup__title">Запись на презентацию</div>
+				<button data-close type="button" class="popup__close">
+					<img src="img/icons/close-modal.svg" alt="">
+				</button>
+			</div>
+			<div class="popup__main">
+				<div class="popup__text">Наши специалисты подробно расскажут о всех особенностях данной модели</div>
+				<div class="popup__form">
+					<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
+						<div class="form__line">
+							<label for="p-callback-2.1" class="form__label">Ваше имя</label>
+							<input required id="p-callback-2.1" type="text" class="form__input">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+						</div>
+						<div class="form__line">
+							<label for="p-callback-2.2" class="form__label">Контактный номер</label>
+							<input required id="p-callback-2.2" type="tel" class="form__input js_phone">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+						</div>
+						<div class="form__footer">
+							<button type="submit" class="form__button">Отправить</button>
+							<div class="form__check checkbox">
+								<label class="checkbox__label">
+									<input class="checkbox__input" type="checkbox" checked>
+									<span class="checkbox__check"></span>
+									<span class="checkbox__text">Отправляя данные, я даю свое <a href="">согласие на обработку перс. данных</a></span>
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

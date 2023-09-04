@@ -37,7 +37,8 @@
 
    // .about__video
 
-   &__video {
+   &__video,
+   &__image-ibg {
       border-radius: 20px;
       @extend %responsiveVideo;
    }

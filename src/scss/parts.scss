@@ -29,6 +29,10 @@
       a {
          color: #CF1235;
 
+         .port2 & {
+            color: #36C3FC;
+         }
+
          &:hover {
             text-decoration: underline;
          }
