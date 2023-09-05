@@ -137,11 +137,9 @@
 					fill: #fff;
 				}
 
-				.white & {
-					fill: #fff;
-				}
-
-				._header-scroll & {
+				.white &,
+				._header-scroll &,
+				.dropdown-open & {
 					fill: #fff;
 				}
 			}
@@ -504,6 +502,10 @@
 		font-size: 16px;
 		line-height: 23px;
 		color: #FF4769;
+
+		.port2 & {
+			color: #36C3FC;
+		}
 
 		a {
 			display: inline-block;

@@ -1714,11 +1714,9 @@ p a:hover {
   height: 100%;
 }
 
-.white .header__logo svg use {
-  fill: #fff;
-}
-
-._header-scroll .header__logo svg use {
+.white .header__logo svg use,
+._header-scroll .header__logo svg use,
+.dropdown-open .header__logo svg use {
   fill: #fff;
 }
 
@@ -1927,6 +1925,10 @@ p a:hover {
   color: #FF4769;
 }
 
+.port2 .dropdown-catalog__models {
+  color: #36C3FC;
+}
+
 .dropdown-catalog__models a {
   display: inline-block;
 }
@@ -2001,7 +2003,7 @@ p a:hover {
 }
 
 .port2 .footer__addres .addres__svg use {
-  fill: #CACACA;
+  fill: #36C3FC;
 }
 
 .footer__socials {
@@ -3456,6 +3458,10 @@ p a:hover {
   color: #CF1235;
 }
 
+.port2 .option-card__top span {
+  color: #36C3FC;
+}
+
 .option-card__image-ibg {
   height: 400px;
   margin-bottom: 2.5rem;
@@ -4307,6 +4313,10 @@ p a:hover {
 
 .contacts .addres__svg use {
   fill: #CF1235;
+}
+
+.port2 .contacts .addres__svg use {
+  fill: #36C3FC;
 }
 
 .contacts__requisites {
@@ -6866,12 +6876,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .option-card__top {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
   }
 
   .options-block {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .page-from__container {
@@ -8499,10 +8510,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .option-card__more {
     width: 60px;
-  }
-
-  .options-block {
-    gap: 60px;
   }
 
   .page-from__container {

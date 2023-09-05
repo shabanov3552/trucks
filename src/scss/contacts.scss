@@ -89,6 +89,10 @@
 
          use {
             fill: #CF1235;
+
+            .port2 & {
+               fill: #36C3FC;
+            }
          }
       }
    }

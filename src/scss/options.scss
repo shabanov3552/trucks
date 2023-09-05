@@ -39,11 +39,15 @@
       flex: 1 1 auto;
 
       @media (max-width:$laptop) {
-         margin-bottom: rem(40);
+         margin-bottom: 0;
       }
 
       span {
          color: #CF1235;
+
+         .port2 & {
+            color: #36C3FC;
+         }
       }
    }
 
@@ -146,11 +150,10 @@
       @include adaptiveValue("padding-left", 80, 20, 0, 1280, 1000);
       @include adaptiveValue("padding-right", 80, 20, 0, 1280, 1000);
       grid-template-columns: 1fr;
+      gap: 20px;
    }
 
-   @media (max-width:$mobile) {
-      gap: 60px;
-   }
+   @media (max-width:$mobile) {}
 }
 
 .page-from {
