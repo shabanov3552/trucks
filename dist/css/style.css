@@ -2284,6 +2284,11 @@ p a:hover {
   line-height: normal;
 }
 
+.home-page__fb-brand img {
+  max-width: 478px;
+  width: 100%;
+}
+
 .home-page__second-block {
   padding-top: 8.75rem;
   padding-bottom: 6.625rem;
@@ -5629,6 +5634,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-bottom: 3.5rem;
   }
 
+  .port2 .contacts__link:nth-child(2) {
+    margin-bottom: 1.5625rem;
+  }
+
+  .port2 .contacts .addres:nth-child(3) {
+    margin-bottom: 6.25rem;
+  }
+
   .contacts .addres:nth-child(4) {
     margin-bottom: 6.25rem;
   }
@@ -6331,6 +6344,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     font-size: 24px;
   }
 
+  .home-page__fb-brand img {
+    max-width: 307px;
+  }
+
   .home-page__second-block {
     padding: 5.3125rem 0;
   }
@@ -6731,6 +6748,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .home-page__fb-title {
     font-size: 20px;
+  }
+
+  .home-page__fb-brand img {
+    max-width: 248px;
   }
 
   .home-page__sb-row-top {
@@ -7545,6 +7566,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .home-page__fb-title br {
     display: none;
+  }
+
+  .home-page__fb-brand img {
+    max-width: 161px;
   }
 
   .home-page__second-block {

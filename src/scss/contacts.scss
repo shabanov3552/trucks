@@ -54,6 +54,10 @@
       @media (min-width:$mobileMiddle) {
          &:nth-child(2) {
             margin-bottom: rem(56);
+
+            .port2 & {
+               margin-bottom: rem(25);
+            }
          }
       }
 
@@ -71,6 +75,11 @@
       margin-bottom: rem(20);
 
       @media (min-width:$mobileMiddle) {
+         &:nth-child(3) {
+            .port2 & {
+               margin-bottom: rem(100);
+            }
+         }
 
          &:nth-child(4) {
             margin-bottom: rem(100);
