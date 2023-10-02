@@ -716,7 +716,6 @@ p {
    }
 }
 
-
 .video {
 
    // .video__image-ibg
@@ -739,4 +738,8 @@ p {
       left: 50%;
       transform: translate(-50%, -50%);
    }
+}
+
+.grecaptcha-badge {
+   visibility: hidden;
 }

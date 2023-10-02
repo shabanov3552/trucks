@@ -1631,6 +1631,10 @@ p a:hover {
           transform: translate(-50%, -50%);
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -4832,6 +4836,11 @@ p a:hover {
 
 .swiper {
   overflow: hidden;
+}
+
+.swiper-initialized {
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
 }
 
 .swiper-wrapper {
