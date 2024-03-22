@@ -469,8 +469,15 @@ textarea.form__input {
           align-items: center;
 }
 
+.filter-check__icon-no-select {
+  max-width: 100%;
+  height: auto;
+}
+
 .filter-check__icon-select {
   display: none;
+  max-width: 100%;
+  height: auto;
 }
 
 .filter-check__text {
@@ -910,6 +917,53 @@ body::after {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.dropdown {
+  position: relative;
+  z-index: 5;
+}
+
+.dropdown__button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.dropdown__button:after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("../img/icons/arrow-dropdown.svg") center no-repeat;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+._dd-active .dropdown__button::after {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.dropdown__block {
+  position: absolute;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+._dd-active .dropdown__block {
+  opacity: 1;
+  visibility: visible;
 }
 
 [data-showmore-button] span:last-child {
@@ -1645,7 +1699,7 @@ p a:hover {
   -webkit-transition: all 0.3s ease 0.2s;
   -o-transition: all 0.3s ease 0.2s;
   transition: all 0.3s ease 0.2s;
-  z-index: 1000;
+  z-index: 1002;
 }
 
 .white .header {
@@ -2788,9 +2842,6 @@ p a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   padding: 0 7.5rem;
 }
 
@@ -2800,6 +2851,8 @@ p a:hover {
   max-width: 470px;
   text-align: right;
   margin-bottom: 4.375rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .home-page__company-grid {
@@ -3008,15 +3061,19 @@ p a:hover {
 }
 
 .truck-detail__first-block {
-  padding-top: 6.875rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 501px 1fr;
-  grid-template-columns: 501px 1fr;
+  -ms-grid-columns: 1fr auto;
+  grid-template-columns: 1fr auto;
   -ms-grid-rows: (auto)[2];
   grid-template-rows: repeat(2, auto);
   gap: 60px;
   margin-bottom: 7.5rem;
+  padding: 0 6.25rem;
+  padding-top: 6.875rem;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .truck-detail__fb-top {
@@ -5918,14 +5975,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-right: 13.5rem;
   }
 
-  .truck-detail__first-block {
-    padding-left: 22.9375rem;
-  }
-
-  .truck-detail__first-block {
-    padding-right: 25rem;
-  }
-
   .truck-detail__specifications {
     padding-left: 20rem;
   }
@@ -6064,14 +6113,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @media (max-width: 90em) {
   .header__menu {
     margin-left: 3.125rem;
-  }
-
-  .truck-detail__first-block {
-    padding-left: 8.75rem;
-  }
-
-  .truck-detail__first-block {
-    padding-right: 11rem;
   }
 
   .truck-detail__specifications {
@@ -9572,30 +9613,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @supports not (margin-left: clamp( 3.125rem , -4.375rem  +  8.3333333333vw , 5.625rem )) {
     .header__menu {
       margin-left: calc(3.125rem + 2.5 * (100vw - 90rem) / 30);
-    }
-}
-
-@supports (padding-left: clamp( 8.75rem , -33.8125rem  +  47.2916666667vw , 22.9375rem )) {
-    .truck-detail__first-block {
-      padding-left: clamp( 8.75rem , -33.8125rem  +  47.2916666667vw , 22.9375rem );
-    }
-}
-
-@supports not (padding-left: clamp( 8.75rem , -33.8125rem  +  47.2916666667vw , 22.9375rem )) {
-    .truck-detail__first-block {
-      padding-left: calc(8.75rem + 14.1875 * (100vw - 90rem) / 30);
-    }
-}
-
-@supports (padding-right: clamp( 11rem , -31rem  +  46.6666666667vw , 25rem )) {
-    .truck-detail__first-block {
-      padding-right: clamp( 11rem , -31rem  +  46.6666666667vw , 25rem );
-    }
-}
-
-@supports not (padding-right: clamp( 11rem , -31rem  +  46.6666666667vw , 25rem )) {
-    .truck-detail__first-block {
-      padding-right: calc(11rem + 14 * (100vw - 90rem) / 30);
     }
 }
 

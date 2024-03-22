@@ -159,12 +159,17 @@
 
 	// .filter-check__icon-no-select
 
-	&__icon-no-select {}
+	&__icon-no-select {
+		max-width: 100%;
+		height: auto;
+	}
 
 	// .filter-check__icon-select
 
 	&__icon-select {
 		display: none;
+		max-width: 100%;
+		height: auto;
 	}
 
 	// .filter-check__text
